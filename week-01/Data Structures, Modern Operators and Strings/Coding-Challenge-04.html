@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Underscore to Camel Case Converter</title>
+  </head>
+  <body>
+    <h1>Underscore to Camel Case Converter</h1>
+
+    <textarea id="variableNames" rows="5" cols="30">
+underscore_case
+first_name
+Some_Variable
+calculate_AGE
+delayed_departure
+    </textarea>
+    <br /><br />
+    <button id="convertBtn">Convert to Camel Case</button>
+
+    <script>
+      // Function to convert underscore_case to camelCase
+      const convertToCamelCase = (str) => {
+        return str
+          .toLowerCase()
+          .split("_")
+          .map((word, index) =>
+            index === 0 ? word : word[0].toUpperCase() + word.slice(1)
+          )
+          .join("");
+      };
+
+      // Event listener for the button click
+      document.getElementById("convertBtn").addEventListener("click", () => {
+        // Get the input from the textarea
+        const inputText = document.getElementById("variableNames").value;
+
+        // Split the input text into lines (variable names)
+        const variableNames = inputText.split("\n");
+
+        // Loop over each variable name
+        variableNames.forEach((variable, index) => {
+          // Trim any extra spaces from each line
+          const trimmedVariable = variable.trim();
+
+          if (trimmedVariable) {
+            // Convert to camelCase
+            const camelCaseVar = convertToCamelCase(trimmedVariable);
+
+            // Count how many '✅' to display (length of camelCaseVar)
+            const checkMarks = "✅".repeat(camelCaseVar.length);
+
+            // Log the result to the console
+            console.log(`${camelCaseVar} ${checkMarks}`);
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

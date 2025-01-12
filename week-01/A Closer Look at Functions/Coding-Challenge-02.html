@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Listener on IIFE</title>
+  </head>
+  <body>
+    <h1 id="header">Hello World!</h1>
+
+    <script>
+      // IIFE (Immediately Invoked Function Expression)
+      (function () {
+        const header = document.getElementById("header");
+
+        // Event listener attached to the body element
+        document.body.addEventListener("click", function () {
+          // Change the color of the header to blue when body is clicked
+          header.style.color = "blue";
+        });
+      })();
+    </script>
+  </body>
+</html>

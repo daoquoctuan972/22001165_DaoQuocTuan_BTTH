@@ -1,0 +1,1586 @@
+
+<!DOCTYPE html>
+
+<html  dir="ltr" lang="vi" xml:lang="vi">
+<head>
+    <title>Hệ Thống Học Tập Trực Tuyến - IUH</title>
+    <link rel="shortcut icon" href="https://lms.iuh.edu.vn/theme/image.php/academi/theme/1697014882/favicon" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="moodle, Hệ Thống Học Tập Trực Tuyến - IUH" />
+<link rel="stylesheet" type="text/css" href="https://lms.iuh.edu.vn/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.css" /><script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script><link rel="stylesheet" type="text/css" href="https://lms.iuh.edu.vn/theme/styles.php/academi/1697014882_1/all" />
+<script>
+//<![CDATA[
+var M = {}; M.yui = {};
+M.pageloadstarttime = new Date();
+M.cfg = {"wwwroot":"https:\/\/lms.iuh.edu.vn","homeurl":{},"sesskey":"qWN15G4sfL","sessiontimeout":"7200","sessiontimeoutwarning":1200,"themerev":"1697014882","slasharguments":1,"theme":"academi","iconsystemmodule":"core\/icon_system_fontawesome","jsrev":"1697014882","admin":"admin","svgicons":true,"usertimezone":"Asia\/Ho_Chi_Minh","courseId":1,"courseContextId":2,"contextid":2,"contextInstanceId":1,"langrev":1733434507,"templaterev":"1697014882"};var yui1ConfigFn = function(me) {if(/-skin|reset|fonts|grids|base/.test(me.name)){me.type='css';me.path=me.path.replace(/\.js/,'.css');me.path=me.path.replace(/\/yui2-skin/,'/assets/skins/sam/yui2-skin')}};
+var yui2ConfigFn = function(me) {var parts=me.name.replace(/^moodle-/,'').split('-'),component=parts.shift(),module=parts[0],min='-min';if(/-(skin|core)$/.test(me.name)){parts.pop();me.type='css';min=''}
+if(module){var filename=parts.join('-');me.path=component+'/'+module+'/'+filename+min+'.'+me.type}else{me.path=component+'/'+component+'.'+me.type}};
+YUI_config = {"debug":false,"base":"https:\/\/lms.iuh.edu.vn\/lib\/yuilib\/3.17.2\/","comboBase":"https:\/\/lms.iuh.edu.vn\/theme\/yui_combo.php?","combine":true,"filter":null,"insertBefore":"firstthemesheet","groups":{"yui2":{"base":"https:\/\/lms.iuh.edu.vn\/lib\/yuilib\/2in3\/2.9.0\/build\/","comboBase":"https:\/\/lms.iuh.edu.vn\/theme\/yui_combo.php?","combine":true,"ext":false,"root":"2in3\/2.9.0\/build\/","patterns":{"yui2-":{"group":"yui2","configFn":yui1ConfigFn}}},"moodle":{"name":"moodle","base":"https:\/\/lms.iuh.edu.vn\/theme\/yui_combo.php?m\/1697014882\/","combine":true,"comboBase":"https:\/\/lms.iuh.edu.vn\/theme\/yui_combo.php?","ext":false,"root":"m\/1697014882\/","patterns":{"moodle-":{"group":"moodle","configFn":yui2ConfigFn}},"filter":null,"modules":{"moodle-core-actionmenu":{"requires":["base","event","node-event-simulate"]},"moodle-core-tooltip":{"requires":["base","node","io-base","moodle-core-notification-dialogue","json-parse","widget-position","widget-position-align","event-outside","cache-base"]},"moodle-core-chooserdialogue":{"requires":["base","panel","moodle-core-notification"]},"moodle-core-formchangechecker":{"requires":["base","event-focus","moodle-core-event"]},"moodle-core-maintenancemodetimer":{"requires":["base","node"]},"moodle-core-popuphelp":{"requires":["moodle-core-tooltip"]},"moodle-core-blocks":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification"]},"moodle-core-handlebars":{"condition":{"trigger":"handlebars","when":"after"}},"moodle-core-event":{"requires":["event-custom"]},"moodle-core-lockscroll":{"requires":["plugin","base-build"]},"moodle-core-notification":{"requires":["moodle-core-notification-dialogue","moodle-core-notification-alert","moodle-core-notification-confirm","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-core-notification-dialogue":{"requires":["base","node","panel","escape","event-key","dd-plugin","moodle-core-widget-focusafterclose","moodle-core-lockscroll"]},"moodle-core-notification-alert":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-confirm":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-exception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-ajaxexception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-dragdrop":{"requires":["base","node","io","dom","dd","event-key","event-focus","moodle-core-notification"]},"moodle-core-languninstallconfirm":{"requires":["base","node","moodle-core-notification-confirm","moodle-core-notification-alert"]},"moodle-core_availability-form":{"requires":["base","node","event","event-delegate","panel","moodle-core-notification-dialogue","json"]},"moodle-backup-confirmcancel":{"requires":["node","node-event-simulate","moodle-core-notification-confirm"]},"moodle-backup-backupselectall":{"requires":["node","event","node-event-simulate","anim"]},"moodle-course-util":{"requires":["node"],"use":["moodle-course-util-base"],"submodules":{"moodle-course-util-base":{},"moodle-course-util-section":{"requires":["node","moodle-course-util-base"]},"moodle-course-util-cm":{"requires":["node","moodle-course-util-base"]}}},"moodle-course-categoryexpander":{"requires":["node","event-key"]},"moodle-course-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-course-coursebase","moodle-course-util"]},"moodle-course-management":{"requires":["base","node","io-base","moodle-core-notification-exception","json-parse","dd-constrain","dd-proxy","dd-drop","dd-delegate","node-event-delegate"]},"moodle-form-passwordunmask":{"requires":[]},"moodle-form-shortforms":{"requires":["node","base","selector-css3","moodle-core-event"]},"moodle-form-dateselector":{"requires":["base","node","overlay","calendar"]},"moodle-question-searchform":{"requires":["base","node"]},"moodle-question-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-question-preview":{"requires":["base","dom","event-delegate","event-key","core_question_engine"]},"moodle-availability_completion-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_date-form":{"requires":["base","node","event","io","moodle-core_availability-form"]},"moodle-availability_grade-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_group-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_grouping-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_ipaddress-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_profile-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-mod_assign-history":{"requires":["node","transition"]},"moodle-mod_attendance-groupfilter":{"requires":["base","node"]},"moodle-mod_quiz-quizbase":{"requires":["base","node"]},"moodle-mod_quiz-toolboxes":{"requires":["base","node","event","event-key","io","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-slot","moodle-core-notification-ajaxexception"]},"moodle-mod_quiz-util":{"requires":["node","moodle-core-actionmenu"],"use":["moodle-mod_quiz-util-base"],"submodules":{"moodle-mod_quiz-util-base":{},"moodle-mod_quiz-util-slot":{"requires":["node","moodle-mod_quiz-util-base"]},"moodle-mod_quiz-util-page":{"requires":["node","moodle-mod_quiz-util-base"]}}},"moodle-mod_quiz-autosave":{"requires":["base","node","event","event-valuechange","node-event-delegate","io-form"]},"moodle-mod_quiz-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-base","moodle-mod_quiz-util-page","moodle-mod_quiz-util-slot","moodle-course-util"]},"moodle-mod_quiz-modform":{"requires":["base","node","event"]},"moodle-mod_quiz-questionchooser":{"requires":["moodle-core-chooserdialogue","moodle-mod_quiz-util","querystring-parse"]},"moodle-message_airnotifier-toolboxes":{"requires":["base","node","io"]},"moodle-filter_glossary-autolinker":{"requires":["base","node","io-base","json-parse","event-delegate","overlay","moodle-core-event","moodle-core-notification-alert","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-filter_mathjaxloader-loader":{"requires":["moodle-core-event"]},"moodle-editor_atto-editor":{"requires":["node","transition","io","overlay","escape","event","event-simulate","event-custom","node-event-html5","node-event-simulate","yui-throttle","moodle-core-notification-dialogue","moodle-core-notification-confirm","moodle-editor_atto-rangy","handlebars","timers","querystring-stringify"]},"moodle-editor_atto-plugin":{"requires":["node","base","escape","event","event-outside","handlebars","event-custom","timers","moodle-editor_atto-menu"]},"moodle-editor_atto-menu":{"requires":["moodle-core-notification-dialogue","node","event","event-custom"]},"moodle-editor_atto-rangy":{"requires":[]},"moodle-report_eventlist-eventfilter":{"requires":["base","event","node","node-event-delegate","datatable","autocomplete","autocomplete-filters"]},"moodle-report_loglive-fetchlogs":{"requires":["base","event","node","io","node-event-delegate"]},"moodle-gradereport_history-userselector":{"requires":["escape","event-delegate","event-key","handlebars","io-base","json-parse","moodle-core-notification-dialogue"]},"moodle-qbank_editquestion-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-tool_capability-search":{"requires":["base","node"]},"moodle-tool_lp-dragdrop-reorder":{"requires":["moodle-core-dragdrop"]},"moodle-tool_monitor-dropdown":{"requires":["base","event","node"]},"moodle-assignfeedback_editpdf-editor":{"requires":["base","event","node","io","graphics","json","event-move","event-resize","transition","querystring-stringify-simple","moodle-core-notification-dialog","moodle-core-notification-alert","moodle-core-notification-warning","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-atto_accessibilitychecker-button":{"requires":["color-base","moodle-editor_atto-plugin"]},"moodle-atto_accessibilityhelper-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_align-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_bold-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_charmap-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_clear-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_collapse-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emojipicker-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emoticon-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_equation-button":{"requires":["moodle-editor_atto-plugin","moodle-core-event","io","event-valuechange","tabview","array-extras"]},"moodle-atto_h5p-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_html-beautify":{},"moodle-atto_html-button":{"requires":["promise","moodle-editor_atto-plugin","moodle-atto_html-beautify","moodle-atto_html-codemirror","event-valuechange"]},"moodle-atto_html-codemirror":{"requires":["moodle-atto_html-codemirror-skin"]},"moodle-atto_image-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_indent-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_italic-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_link-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-usedfiles":{"requires":["node","escape"]},"moodle-atto_media-button":{"requires":["moodle-editor_atto-plugin","moodle-form-shortforms"]},"moodle-atto_noautolink-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_orderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_recordrtc-recording":{"requires":["moodle-atto_recordrtc-button"]},"moodle-atto_recordrtc-button":{"requires":["moodle-editor_atto-plugin","moodle-atto_recordrtc-recording"]},"moodle-atto_rtl-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_strike-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_subscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_superscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_table-button":{"requires":["moodle-editor_atto-plugin","moodle-editor_atto-menu","event","event-valuechange"]},"moodle-atto_title-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_underline-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_undo-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_unorderedlist-button":{"requires":["moodle-editor_atto-plugin"]}}},"gallery":{"name":"gallery","base":"https:\/\/lms.iuh.edu.vn\/lib\/yuilib\/gallery\/","combine":true,"comboBase":"https:\/\/lms.iuh.edu.vn\/theme\/yui_combo.php?","ext":false,"root":"gallery\/1697014882\/","patterns":{"gallery-":{"group":"gallery"}}}},"modules":{"core_filepicker":{"name":"core_filepicker","fullpath":"https:\/\/lms.iuh.edu.vn\/lib\/javascript.php\/1697014882\/repository\/filepicker.js","requires":["base","node","node-event-simulate","json","async-queue","io-base","io-upload-iframe","io-form","yui2-treeview","panel","cookie","datatable","datatable-sort","resize-plugin","dd-plugin","escape","moodle-core_filepicker","moodle-core-notification-dialogue"]},"core_comment":{"name":"core_comment","fullpath":"https:\/\/lms.iuh.edu.vn\/lib\/javascript.php\/1697014882\/comment\/comment.js","requires":["base","io-base","node","json","yui2-animation","overlay","escape"]},"mathjax":{"name":"mathjax","fullpath":"https:\/\/lms.iuh.edu.vn\/MathJax\/MathJax.js?delayStartupUntil=configured"}}};
+M.yui.loader = {modules: {}};
+
+//]]>
+</script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body  id="page-site-index" class="limitedwidth format-site course path-site chrome dir-ltr lang-vi yui-skin-sam yui3-skin-sam lms-iuh-edu-vn pagelayout-frontpage course-1 context-2 notloggedin uses-drawers theme-based-header">
+<div class="toast-wrapper mx-auto py-0 fixed-top" role="status" aria-live="polite"></div>
+<div id="page-wrapper" class="d-print-block">
+
+    <div>
+    <a class="sr-only sr-only-focusable" href="#maincontent">Chuyển tới nội dung chính</a>
+</div><script src="https://lms.iuh.edu.vn/lib/javascript.php/1697014882/lib/polyfills/polyfill.js"></script>
+<script src="https://lms.iuh.edu.vn/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.js"></script><script src="https://lms.iuh.edu.vn/lib/javascript.php/1697014882/lib/javascript-static.js"></script>
+<script>
+//<![CDATA[
+document.body.className += ' jsenabled';
+//]]>
+</script>
+
+
+
+    
+<nav id="header" class=" fixed-top navbar navbar-light bg-faded navbar-static-top navbar-expand moodle-has-zindex" aria-label="Định hướng trang">
+
+     <div class="container-fluid navbar-nav">
+            
+                <nav class="nav navbar-nav hidden-md-down address-head">
+                        <span><i class="fa fa-phone"></i>Call us : 0283.8940 390 - ext 838</span>
+                        <span><i class="fa fa-envelope-o"></i>E-mail : <a href="mailto:csm@iuh.edu.vn">csm@iuh.edu.vn</a></span>
+                </nav>
+
+        
+        <div id="usernavigation" class="navbar-nav ml-auto">
+                <div class="langmenu">
+                    <div class="dropdown show">
+                        <a href="#" role="button" id="lang-menu-toggle" data-toggle="dropdown" aria-label="Ngôn ngữ" aria-haspopup="true" aria-controls="lang-action-menu" class="btn dropdown-toggle">
+                            <i class="icon fa fa-language fa-fw mr-1" aria-hidden="true"></i>
+                            <span class="langbutton">
+                                Vietnamese ‎(vi)‎
+                            </span>
+                            <b class="caret"></b>
+                        </a>
+                        <div role="menu" aria-labelledby="lang-menu-toggle" id="lang-action-menu" class="dropdown-menu dropdown-menu-right">
+                                    <a href="https://lms.iuh.edu.vn/?lang=en" class="dropdown-item pl-5" role="menuitem" 
+                                            lang="en" >
+                                        English ‎(en)‎
+                                    </a>
+                                    <a href="#" class="dropdown-item pl-5" role="menuitem" aria-current="true"
+                                            >
+                                        Vietnamese ‎(vi)‎
+                                    </a>
+                        </div>
+                    </div>
+                </div>
+            
+            
+            <div class="d-flex align-items-stretch usermenu-container" data-region="usermenu">
+                    <div class="usermenu">
+                            <span class="login pl-2">
+                                    <a href="https://lms.iuh.edu.vn/login/index.php">Đăng nhập</a>
+                            </span>
+                    </div>
+            </div>
+            
+        </div>
+        <!-- search_box -->
+    </div>
+</nav>
+
+<div  class="drawer drawer-left drawer-primary d-print-none not-initialized" data-region="fixed-drawer" id="theme_boost-drawers-primary" data-preference="" data-state="show-drawer-primary" data-forceopen="0" data-close-on-resize="1">
+    <div class="drawerheader">
+        <button
+            class="btn drawertoggle icon-no-margin hidden"
+            data-toggler="drawers"
+            data-action="closedrawer"
+            data-target="theme_boost-drawers-primary"
+            data-toggle="tooltip"
+            data-placement="right"
+            title="Đóng trình vẽ"
+        >
+            <i class="icon fa fa-times fa-fw " aria-hidden="true"  ></i>
+        </button>
+    </div>
+    <div class="drawercontent drag-container" data-usertour="scroller">
+                <div class="list-group">
+                <a href="https://lms.iuh.edu.vn/" class="list-group-item list-group-item-action active " aria-current="true">
+                    Trang chủ
+                </a>
+                <a href="https://lms.iuh.edu.vn/course/" class="list-group-item list-group-item-action  " >
+                    Các khóa học
+                </a>
+                <a href="https://lms.iuh.edu.vn/mod/forum/" class="list-group-item list-group-item-action  " >
+                    Tin tức và thông báo
+                </a>
+        </div>
+
+    </div>
+</div>
+    
+        <div class="header-main">
+            <div class="container-fluid">
+                <nav class="navbar navbar-light bg-faded navbar-expand">
+                    <a href="https://lms.iuh.edu.vn/?redirect=0" class="navbar-brand has-logo
+                        ">
+                        <span class="logo">
+                            <img src="//lms.iuh.edu.vn/pluginfile.php/1/theme_academi/logo/1697014882/Logo_IUH.png" alt="E-IUH">
+                        </span>
+                    </a>
+    
+                        <div class="primary-navigation">
+                            <nav class="moremenu navigation">
+                                <ul id="moremenu-677ca75bb50f0-navbar-nav" role="menubar" class="nav more-nav navbar-nav">
+                                            <li data-key="home" class="nav-item" role="none" data-forceintomoremenu="false">
+                                                        <a role="menuitem" class="nav-link active "
+                                                            href="https://lms.iuh.edu.vn/"
+                                                            aria-current="true"
+                                                            
+                                                        >
+                                                            Trang chủ
+                                                        </a>
+                                            </li>
+                                            <li data-key="" class="nav-item" role="none" data-forceintomoremenu="false">
+                                                        <a role="menuitem" class="nav-link  "
+                                                            href="https://lms.iuh.edu.vn/course/"
+                                                            
+                                                            tabindex="-1"
+                                                        >
+                                                            Các khóa học
+                                                        </a>
+                                            </li>
+                                            <li data-key="" class="nav-item" role="none" data-forceintomoremenu="false">
+                                                        <a role="menuitem" class="nav-link  "
+                                                            href="https://lms.iuh.edu.vn/mod/forum/"
+                                                            
+                                                            tabindex="-1"
+                                                        >
+                                                            Tin tức và thông báo
+                                                        </a>
+                                            </li>
+                                    <li role="none" class="nav-item dropdown dropdownmoremenu d-none" data-region="morebutton">
+                                        <a class="dropdown-toggle nav-link " href="#" id="moremenu-dropdown-677ca75bb50f0" role="menuitem" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" tabindex="-1">
+                                            Xem thêm
+                                        </a>
+                                        <ul class="dropdown-menu dropdown-menu-left" data-region="moredropdown" aria-labelledby="moremenu-dropdown-677ca75bb50f0" role="menu">
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+    
+                    <ul class="navbar-nav d-none d-md-flex my-1 px-1">
+                        <!-- page_heading_menu -->
+                        
+                    </ul>
+    
+                </nav>
+            </div>
+        </div>
+
+        <div class="theme-slider">
+        <div id="home-page-carousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#home-page-carousel" data-slide-to="" class=""></li>
+        </ol>
+    
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+    
+          <div class="carousel-item  active" style="background-image: url(//lms.iuh.edu.vn/pluginfile.php/1/theme_academi/slide1image/1697014882/lms-01.jpg);" >
+            <!-- <img src="<?php echo $slideimg; ?>" alt="slide"> -->
+              <div class=" carousel-overlay-content container-fluid">
+                  <div class="content-wrap">
+                  <h2>Hệ Thống Học Tập Trực Tuyến - IUH</h2><br>
+    
+                  <p>Đổi mới tư duy, làm giàu thêm tri thức - đời sống</p>
+                </div>
+    
+              </div>
+          </div>
+          <div class="carousel-item " style="background-image: url(//lms.iuh.edu.vn/pluginfile.php/1/theme_academi/slide3image/1697014882/anh5.jpg);" >
+            <!-- <img src="<?php echo $slideimg; ?>" alt="slide"> -->
+              <div class=" carousel-overlay-content container-fluid">
+                  <div class="content-wrap">
+                  <h2>Hệ Thống Học Tập Trực Tuyến - IUH</h2><br>
+    
+                  <p>Đổi mới tư duy, làm giàu thêm tri thức - đời sống<br></p>
+                </div>
+    
+              </div>
+          </div>
+        </div>
+    
+        <div class = "pagenav">
+          <a class="left carousel-control carousel-control-prev" href="#home-page-carousel" data-slide="prev">
+          </a>
+          <a class="right carousel-control carousel-control-next" href="#home-page-carousel" data-slide="next">
+          </a>
+        </div>
+        </div>
+        </div>
+    
+        <style>
+    
+        .carousel-item-next.carousel-item-left,
+        .carousel-item-prev.carousel-item-right {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        }
+    
+        @supports ((-webkit-transform-style: preserve-3d) or (transform-style: preserve-3d)) {
+        .carousel-item-next.carousel-item-left,
+        .carousel-item-prev.carousel-item-right {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        }
+        }
+    
+        .carousel-item-next,
+        .active.carousel-item-right {
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+        }
+    
+        @supports ((-webkit-transform-style: preserve-3d) or (transform-style: preserve-3d)) {
+        .carousel-item-next,
+        .active.carousel-item-right {
+        -webkit-transform: translate3d(100%, 0, 0);
+        transform: translate3d(100%, 0, 0);
+        }
+        }
+    
+        .carousel-item-prev,
+        .active.carousel-item-left {
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+        }
+    
+        @supports ((-webkit-transform-style: preserve-3d) or (transform-style: preserve-3d)) {
+        .carousel-item-prev,
+        .active.carousel-item-left {
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0);
+        }
+        }
+    
+        .carousel-fade .carousel-item {
+        opacity: 0;
+        transition-duration: .6s;
+        transition-property: opacity;
+        }
+    
+    
+        @supports ((-webkit-transform-style: preserve-3d) or (transform-style: preserve-3d)) {
+        .carousel-fade .carousel-item-next,
+        .carousel-fade .carousel-item-prev,
+        .carousel-fade .carousel-item.active,
+        .carousel-fade .active.carousel-item-left,
+        .carousel-fade .active.carousel-item-prev {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        }
+        }
+    
+    
+    
+        </style>
+    
+        <div  class="drawer drawer-right d-print-none not-initialized" data-region="fixed-drawer" id="theme_boost-drawers-blocks" data-preference="drawer-open-block" data-state="show-drawer-right" data-forceopen="" data-close-on-resize="1">
+    <div class="drawerheader">
+        <button
+            class="btn drawertoggle icon-no-margin hidden"
+            data-toggler="drawers"
+            data-action="closedrawer"
+            data-target="theme_boost-drawers-blocks"
+            data-toggle="tooltip"
+            data-placement="left"
+            title="Đóng khối"
+        >
+            <i class="icon fa fa-times fa-fw " aria-hidden="true"  ></i>
+        </button>
+    </div>
+    <div class="drawercontent drag-container" data-usertour="scroller">
+                        <section class="d-print-none" aria-label="Các khối">
+                    
+                    <aside id="block-region-side-pre" class="block-region" data-blockregion="side-pre" data-droptarget="1"><a href="#sb-2" class="sr-only sr-only-focusable">Bỏ qua Lịch</a>
+
+<section id="inst34"
+     class=" block_calendar_month block  card mb-3"
+     role="complementary"
+     data-block="calendar_month"
+     data-instance-id="34"
+          aria-labelledby="instance-34-header"
+     >
+
+    <div class="card-body p-3">
+
+            <h5 id="instance-34-header" class="card-title d-inline">Lịch</h5>
+
+
+        <div class="card-text content mt-3">
+            <div data-region="calendar" class="maincalendar"><div id="calendar-month-677ca75baa90b677ca75b9d11e4-1" data-template="core_calendar/month_detailed">
+    <div class="header d-flex flex-wrap p-1">
+    </div>    <div class="calendarwrapper" data-courseid="1" data-context-id="0" data-month="1" data-year="2025" data-view="monthblock">
+        <div id="month-navigation-677ca75baa90b677ca75b9d11e4-1" class="controls">
+            <div class="calendar-controls">
+                <a href="https://lms.iuh.edu.vn/calendar/view.php?view=month&amp;time=1732986000" class="arrow_link previous" title="Tháng trước" data-year="2024" data-month="12" data-drop-zone="nav-link" >
+                    <span class="arrow">&#x25C4;</span>
+                    &nbsp;
+                    <span class="arrow_text">December</span>
+                </a>
+                <span class="hide"> | </span>
+                    <h4 class="current">January 2025</h4>
+                <span class="hide"> | </span>
+                <a href="https://lms.iuh.edu.vn/calendar/view.php?view=month&amp;time=1738342800" class="arrow_link next" title="Tháng tới" data-year="2025" data-month="2" data-drop-zone="nav-link" >
+                    <span class="arrow_text">February</span>
+                    &nbsp;
+                    <span class="arrow">&#x25BA;</span>
+                </a>
+            </div>
+        </div>
+        <span class="overlay-icon-container hidden" data-region="overlay-icon-container">
+            <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Đang đọc" role="img" aria-label="Đang đọc"></i></span>
+        </span>
+        <table id="month-detailed-677ca75baa90b677ca75b9d11e4-1" class="calendarmonth calendartable mb-0">
+            <thead>
+                <tr>
+                    <th class="header text-xs-center">
+                        <span class="sr-only">Thứ 2</span>
+                        <span aria-hidden="true">T2</span>
+                    </th>
+                    <th class="header text-xs-center">
+                        <span class="sr-only">Thứ 3</span>
+                        <span aria-hidden="true">T3</span>
+                    </th>
+                    <th class="header text-xs-center">
+                        <span class="sr-only">Thứ 4</span>
+                        <span aria-hidden="true">T4</span>
+                    </th>
+                    <th class="header text-xs-center">
+                        <span class="sr-only">Thứ 5</span>
+                        <span aria-hidden="true">T5</span>
+                    </th>
+                    <th class="header text-xs-center">
+                        <span class="sr-only">Thứ 6</span>
+                        <span aria-hidden="true">T6</span>
+                    </th>
+                    <th class="header text-xs-center">
+                        <span class="sr-only">Thứ 7</span>
+                        <span aria-hidden="true">T7</span>
+                    </th>
+                    <th class="header text-xs-center">
+                        <span class="sr-only">Chủ Nhật</span>
+                        <span aria-hidden="true">CN</span>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-region="month-view-week">
+                        <td class="dayblank">&nbsp;</td>
+                        <td class="dayblank">&nbsp;</td>
+                        <td class="day text-sm-center text-md-left"
+                            data-day="1"
+                            data-day-timestamp="1735664400"
+                            data-drop-zone="month-view-day"
+                            data-region="day"
+                            data-new-event-timestamp="1735704155"
+                            >
+                            <div class="d-none d-md-block hidden-phone text-xs-center">
+                                <span class="sr-only">Không có các sự kiện, Wednesday, 1 January</span>
+                                    <span aria-hidden="true"><span class="day-number-circle"><span class="day-number">1</span></span></span>
+                            </div>
+                            <div class="d-md-none hidden-desktop hidden-tablet">
+                                <span class="sr-only">Không có các sự kiện, Wednesday, 1 January</span>
+                                    <span aria-hidden="true"><span class="day-number-circle"><span class="day-number">1</span></span></span>
+                            </div>
+                        </td>
+                        <td class="day text-sm-center text-md-left"
+                            data-day="2"
+                            data-day-timestamp="1735750800"
+                            data-drop-zone="month-view-day"
+                            data-region="day"
+                            data-new-event-timestamp="1735790555"
+                            >
+                            <div class="d-none d-md-block hidden-phone text-xs-center">
+                                <span class="sr-only">Không có các sự kiện, Thursday, 2 January</span>
+                                    <span aria-hidden="true"><span class="day-number-circle"><span class="day-number">2</span></span></span>
+                            </div>
+                            <div class="d-md-none hidden-desktop hidden-tablet">
+                                <span class="sr-only">Không có các sự kiện, Thursday, 2 January</span>
+                                    <span aria-hidden="true"><span class="day-number-circle"><span class="day-number">2</span></span></span>
+                            </div>
+                        </td>
+                        <td class="day text-sm-center text-md-left"
+                            data-day="3"
+                            data-day-timestamp="1735837200"
+                            data-drop-zone="month-view-day"
+                            data-region="day"
+                            data-new-event-timestamp="1735876955"
+                            >
+                            <div class="d-none d-md-block hidden-phone text-xs-center">
+                                <span class="sr-only">Không có các sự kiện, Friday, 3 January</span>
+                                    <span aria-hidden="true"><span class="day-number-circle"><span class="day-number">3</span></span></span>
+                            </div>
+                            <div class="d-md-none hidden-desktop hidden-tablet">
+                                <span class="sr-only">Không có các sự kiện, Friday, 3 January</span>
+                                    <span aria-hidden="true"><span class="day-number-circle"><span class="day-number">3</span></span></span>
+                            </div>
+                        </td>
+                        <td class="day text-sm-center text-md-left weekend"
+                            data-day="4"
+                            data-day-timestamp="1735923600"
+                            data-drop-zone="month-view-day"
+                            data-region="day"
+                            data-new-event-timestamp="1735963355"
+                            >
+                            <div class="d-none d-md-block hidden-phone text-xs-center">
+                                <span class="sr-only">Không có các sự kiện, Saturday, 4 January</span>
+                                    <span aria-hidden="true"><span class="day-number-circle"><span class="day-number">4</span></span></span>
+                            </div>
+                            <div class="d-md-none hidden-desktop hidden-tablet">
+                                <span class="sr-only">Không có các sự kiện, Saturday, 4 January</span>
+                                    <span aria-hidden="true"><span class="day-number-circle"><span class="day-number">4</span></span></span>
+                            </div>
+                        </td>
+                        <td class="day text-sm-center text-md-left weekend"
+                            data-day="5"
+                            data-day-timestamp="1736010000"
+                            data-drop-zone="month-view-day"
+                            data-region="day"
+                            data-new-event-timestamp="1736049755"
+                            >
+                            <div class="d-none d-md-block hidden-phone text-xs-center">
+                                <span class="sr-only">Không có các sự kiện, Sunday, 5 January</span>
+                                    <span aria-hidden="true"><span class="day-number-circle"><span class="day-number">5</span></span></span>
+                            </div>
+                            <div class="d-md-none hidden-desktop hidden-tablet">
+                                <span class="sr-only">Không có các sự kiện, Sunday, 5 January</span>
+                                    <span aria-hidden="true"><span class="day-number-circle"><span class="day-number">5</span></span></span>
+                            </div>
+                        </td>
+                </tr>
+                <tr data-region="month-view-week">
+                        <td class="day text-sm-center text-md-left"
+                            data-day="6"
+                            data-day-timestamp="1736096400"
+                            data-drop-zone="month-view-day"
+                            data-region="day"
+                            data-new-event-timestamp="1736136155"
+                            >
+                            <div class="d-none d-md-block hidden-phone text-xs-center">
+                                <span class="sr-only">Không có các sự kiện, Monday, 6 January</span>
+                                    <span aria-hidden="true"><span class="day-number-circle"><span class="day-number">6</span></span></span>
+                            </div>
+                            <div class="d-md-none hidden-desktop hidden-tablet">
+                                <span class="sr-only">Không có các sự kiện, Monday, 6 January</span>
+                                    <span aria-hidden="true"><span class="day-number-circle"><span class="day-number">6</span></span></span>
+                            </div>
+                        </td>
+                        <td class="day text-sm-center text-md-left today"
+                            data-day="7"
+                            data-day-timestamp="1736182800"
+                            data-drop-zone="month-view-day"
+                            data-region="day"
+                            data-new-event-timestamp="1736222555" title="Hôm nay"
+                            >
+                            <div class="d-none d-md-block hidden-phone text-xs-center">
+                                <span class="sr-only">Không có các sự kiện, Tuesday, 7 January</span>
+                                    <span aria-hidden="true"><span class="day-number-circle"><span class="day-number">7</span></span></span>
+                            </div>
+                            <div class="d-md-none hidden-desktop hidden-tablet">
+                                <span class="sr-only">Không có các sự kiện, Tuesday, 7 January</span>
+                                    <span aria-hidden="true"><span class="day-number-circle"><span class="day-number">7</span></span></span>
+                            </div>
+                        </td>
+                        <td class="day text-sm-center text-md-left"
+                            data-day="8"
+                            data-day-timestamp="1736269200"
+                            data-drop-zone="month-view-day"
+                            data-region="day"
+                            data-new-event-timestamp="1736308955"
+                            >
+                            <div class="d-none d-md-block hidden-phone text-xs-center">
+                                <span class="sr-only">Không có các sự kiện, Wednesday, 8 January</span>
+                                    <span aria-hidden="true"><span class="day-number-circle"><span class="day-number">8</span></span></span>
+                            </div>
+                            <div class="d-md-none hidden-desktop hidden-tablet">
+                                <span class="sr-only">Không có các sự kiện, Wednesday, 8 January</span>
+                                    <span aria-hidden="true"><span class="day-number-circle"><span class="day-number">8</span></span></span>
+                            </div>
+                        </td>
+                        <td class="day text-sm-center text-md-left"
+                            data-day="9"
+                            data-day-timestamp="1736355600"
+                            data-drop-zone="month-view-day"
+                            data-region="day"
+                            data-new-event-timestamp="1736395355"
+                            >
+                            <div class="d-none d-md-block hidden-phone text-xs-center">
+                                <span class="sr-only">Không có các sự kiện, Thursday, 9 January</span>
+                                    <span aria-hidden="true"><span class="day-number-circle"><span class="day-number">9</span></span></span>
+                            </div>
+                            <div class="d-md-none hidden-desktop hidden-tablet">
+                                <span class="sr-only">Không có các sự kiện, Thursday, 9 January</span>
+                                    <span aria-hidden="true"><span class="day-number-circle"><span class="day-number">9</span></span></span>
+                            </div>
+                        </td>
+                        <td class="day text-sm-center text-md-left"
+                            data-day="10"
+                            data-day-timestamp="1736442000"
+                            data-drop-zone="month-view-day"
+                            data-region="day"
+                            data-new-event-timestamp="1736481755"
+                            >
+                            <div class="d-none d-md-block hidden-phone text-xs-center">
+                                <span class="sr-only">Không có các sự kiện, Friday, 10 January</span>
+                                    <span aria-hidden="true"><span class="day-number-circle"><span class="day-number">10</span></span></span>
+                            </div>
+                            <div class="d-md-none hidden-desktop hidden-tablet">
+                                <span class="sr-only">Không có các sự kiện, Friday, 10 January</span>
+                                    <span aria-hidden="true"><span class="day-number-circle"><span class="day-number">10</span></span></span>
+                            </div>
+                        </td>
+                        <td class="day text-sm-center text-md-left weekend"
+                            data-day="11"
+                            data-day-timestamp="1736528400"
+                            data-drop-zone="month-view-day"
+                            data-region="day"
+                            data-new-event-timestamp="1736568155"
+                            >
+                            <div class="d-none d-md-block hidden-phone text-xs-center">
+                                <span class="sr-only">Không có các sự kiện, Saturday, 11 January</span>
+                                    <span aria-hidden="true"><span class="day-number-circle"><span class="day-number">11</span></span></span>
+                            </div>
+                            <div class="d-md-none hidden-desktop hidden-tablet">
+                                <span class="sr-only">Không có các sự kiện, Saturday, 11 January</span>
+                                    <span aria-hidden="true"><span class="day-number-circle"><span class="day-number">11</span></span></span>
+                            </div>
+                        </td>
+                        <td class="day text-sm-center text-md-left weekend"
+                            data-day="12"
+                            data-day-timestamp="1736614800"
+                            data-drop-zone="month-view-day"
+                            data-region="day"
+                            data-new-event-timestamp="1736654555"
+                            >
+                            <div class="d-none d-md-block hidden-phone text-xs-center">
+                                <span class="sr-only">Không có các sự kiện, Sunday, 12 January</span>
+                                    <span aria-hidden="true"><span class="day-number-circle"><span class="day-number">12</span></span></span>
+                            </div>
+                            <div class="d-md-none hidden-desktop hidden-tablet">
+                                <span class="sr-only">Không có các sự kiện, Sunday, 12 January</span>
+                                    <span aria-hidden="true"><span class="day-number-circle"><span class="day-number">12</span></span></span>
+                            </div>
+                        </td>
+                </tr>
+                <tr data-region="month-view-week">
+                        <td class="day text-sm-center text-md-left"
+                            data-day="13"
+                            data-day-timestamp="1736701200"
+                            data-drop-zone="month-view-day"
+                            data-region="day"
+                            data-new-event-timestamp="1736740955"
+                            >
+                            <div class="d-none d-md-block hidden-phone text-xs-center">
+                                <span class="sr-only">Không có các sự kiện, Monday, 13 January</span>
+                                    <span aria-hidden="true"><span class="day-number-circle"><span class="day-number">13</span></span></span>
+                            </div>
+                            <div class="d-md-none hidden-desktop hidden-tablet">
+                                <span class="sr-only">Không có các sự kiện, Monday, 13 January</span>
+                                    <span aria-hidden="true"><span class="day-number-circle"><span class="day-number">13</span></span></span>
+                            </div>
+                        </td>
+                        <td class="day text-sm-center text-md-left"
+                            data-day="14"
+                            data-day-timestamp="1736787600"
+                            data-drop-zone="month-view-day"
+                            data-region="day"
+                            data-new-event-timestamp="1736827355"
+                            >
+                            <div class="d-none d-md-block hidden-phone text-xs-center">
+                                <span class="sr-only">Không có các sự kiện, Tuesday, 14 January</span>
+                                    <span aria-hidden="true"><span class="day-number-circle"><span class="day-number">14</span></span></span>
+                            </div>
+                            <div class="d-md-none hidden-desktop hidden-tablet">
+                                <span class="sr-only">Không có các sự kiện, Tuesday, 14 January</span>
+                                    <span aria-hidden="true"><span class="day-number-circle"><span class="day-number">14</span></span></span>
+                            </div>
+                        </td>
+                        <td class="day text-sm-center text-md-left"
+                            data-day="15"
+                            data-day-timestamp="1736874000"
+                            data-drop-zone="month-view-day"
+                            data-region="day"
+                            data-new-event-timestamp="1736913755"
+                            >
+                            <div class="d-none d-md-block hidden-phone text-xs-center">
+                                <span class="sr-only">Không có các sự kiện, Wednesday, 15 January</span>
+                                    <span aria-hidden="true"><span class="day-number-circle"><span class="day-number">15</span></span></span>
+                            </div>
+                            <div class="d-md-none hidden-desktop hidden-tablet">
+                                <span class="sr-only">Không có các sự kiện, Wednesday, 15 January</span>
+                                    <span aria-hidden="true"><span class="day-number-circle"><span class="day-number">15</span></span></span>
+                            </div>
+                        </td>
+                        <td class="day text-sm-center text-md-left"
+                            data-day="16"
+                            data-day-timestamp="1736960400"
+                            data-drop-zone="month-view-day"
+                            data-region="day"
+                            data-new-event-timestamp="1737000155"
+                            >
+                            <div class="d-none d-md-block hidden-phone text-xs-center">
+                                <span class="sr-only">Không có các sự kiện, Thursday, 16 January</span>
+                                    <span aria-hidden="true"><span class="day-number-circle"><span class="day-number">16</span></span></span>
+                            </div>
+                            <div class="d-md-none hidden-desktop hidden-tablet">
+                                <span class="sr-only">Không có các sự kiện, Thursday, 16 January</span>
+                                    <span aria-hidden="true"><span class="day-number-circle"><span class="day-number">16</span></span></span>
+                            </div>
+                        </td>
+                        <td class="day text-sm-center text-md-left"
+                            data-day="17"
+                            data-day-timestamp="1737046800"
+                            data-drop-zone="month-view-day"
+                            data-region="day"
+                            data-new-event-timestamp="1737086555"
+                            >
+                            <div class="d-none d-md-block hidden-phone text-xs-center">
+                                <span class="sr-only">Không có các sự kiện, Friday, 17 January</span>
+                                    <span aria-hidden="true"><span class="day-number-circle"><span class="day-number">17</span></span></span>
+                            </div>
+                            <div class="d-md-none hidden-desktop hidden-tablet">
+                                <span class="sr-only">Không có các sự kiện, Friday, 17 January</span>
+                                    <span aria-hidden="true"><span class="day-number-circle"><span class="day-number">17</span></span></span>
+                            </div>
+                        </td>
+                        <td class="day text-sm-center text-md-left weekend"
+                            data-day="18"
+                            data-day-timestamp="1737133200"
+                            data-drop-zone="month-view-day"
+                            data-region="day"
+                            data-new-event-timestamp="1737172955"
+                            >
+                            <div class="d-none d-md-block hidden-phone text-xs-center">
+                                <span class="sr-only">Không có các sự kiện, Saturday, 18 January</span>
+                                    <span aria-hidden="true"><span class="day-number-circle"><span class="day-number">18</span></span></span>
+                            </div>
+                            <div class="d-md-none hidden-desktop hidden-tablet">
+                                <span class="sr-only">Không có các sự kiện, Saturday, 18 January</span>
+                                    <span aria-hidden="true"><span class="day-number-circle"><span class="day-number">18</span></span></span>
+                            </div>
+                        </td>
+                        <td class="day text-sm-center text-md-left weekend"
+                            data-day="19"
+                            data-day-timestamp="1737219600"
+                            data-drop-zone="month-view-day"
+                            data-region="day"
+                            data-new-event-timestamp="1737259355"
+                            >
+                            <div class="d-none d-md-block hidden-phone text-xs-center">
+                                <span class="sr-only">Không có các sự kiện, Sunday, 19 January</span>
+                                    <span aria-hidden="true"><span class="day-number-circle"><span class="day-number">19</span></span></span>
+                            </div>
+                            <div class="d-md-none hidden-desktop hidden-tablet">
+                                <span class="sr-only">Không có các sự kiện, Sunday, 19 January</span>
+                                    <span aria-hidden="true"><span class="day-number-circle"><span class="day-number">19</span></span></span>
+                            </div>
+                        </td>
+                </tr>
+                <tr data-region="month-view-week">
+                        <td class="day text-sm-center text-md-left"
+                            data-day="20"
+                            data-day-timestamp="1737306000"
+                            data-drop-zone="month-view-day"
+                            data-region="day"
+                            data-new-event-timestamp="1737345755"
+                            >
+                            <div class="d-none d-md-block hidden-phone text-xs-center">
+                                <span class="sr-only">Không có các sự kiện, Monday, 20 January</span>
+                                    <span aria-hidden="true"><span class="day-number-circle"><span class="day-number">20</span></span></span>
+                            </div>
+                            <div class="d-md-none hidden-desktop hidden-tablet">
+                                <span class="sr-only">Không có các sự kiện, Monday, 20 January</span>
+                                    <span aria-hidden="true"><span class="day-number-circle"><span class="day-number">20</span></span></span>
+                            </div>
+                        </td>
+                        <td class="day text-sm-center text-md-left"
+                            data-day="21"
+                            data-day-timestamp="1737392400"
+                            data-drop-zone="month-view-day"
+                            data-region="day"
+                            data-new-event-timestamp="1737432155"
+                            >
+                            <div class="d-none d-md-block hidden-phone text-xs-center">
+                                <span class="sr-only">Không có các sự kiện, Tuesday, 21 January</span>
+                                    <span aria-hidden="true"><span class="day-number-circle"><span class="day-number">21</span></span></span>
+                            </div>
+                            <div class="d-md-none hidden-desktop hidden-tablet">
+                                <span class="sr-only">Không có các sự kiện, Tuesday, 21 January</span>
+                                    <span aria-hidden="true"><span class="day-number-circle"><span class="day-number">21</span></span></span>
+                            </div>
+                        </td>
+                        <td class="day text-sm-center text-md-left"
+                            data-day="22"
+                            data-day-timestamp="1737478800"
+                            data-drop-zone="month-view-day"
+                            data-region="day"
+                            data-new-event-timestamp="1737518555"
+                            >
+                            <div class="d-none d-md-block hidden-phone text-xs-center">
+                                <span class="sr-only">Không có các sự kiện, Wednesday, 22 January</span>
+                                    <span aria-hidden="true"><span class="day-number-circle"><span class="day-number">22</span></span></span>
+                            </div>
+                            <div class="d-md-none hidden-desktop hidden-tablet">
+                                <span class="sr-only">Không có các sự kiện, Wednesday, 22 January</span>
+                                    <span aria-hidden="true"><span class="day-number-circle"><span class="day-number">22</span></span></span>
+                            </div>
+                        </td>
+                        <td class="day text-sm-center text-md-left"
+                            data-day="23"
+                            data-day-timestamp="1737565200"
+                            data-drop-zone="month-view-day"
+                            data-region="day"
+                            data-new-event-timestamp="1737604955"
+                            >
+                            <div class="d-none d-md-block hidden-phone text-xs-center">
+                                <span class="sr-only">Không có các sự kiện, Thursday, 23 January</span>
+                                    <span aria-hidden="true"><span class="day-number-circle"><span class="day-number">23</span></span></span>
+                            </div>
+                            <div class="d-md-none hidden-desktop hidden-tablet">
+                                <span class="sr-only">Không có các sự kiện, Thursday, 23 January</span>
+                                    <span aria-hidden="true"><span class="day-number-circle"><span class="day-number">23</span></span></span>
+                            </div>
+                        </td>
+                        <td class="day text-sm-center text-md-left"
+                            data-day="24"
+                            data-day-timestamp="1737651600"
+                            data-drop-zone="month-view-day"
+                            data-region="day"
+                            data-new-event-timestamp="1737691355"
+                            >
+                            <div class="d-none d-md-block hidden-phone text-xs-center">
+                                <span class="sr-only">Không có các sự kiện, Friday, 24 January</span>
+                                    <span aria-hidden="true"><span class="day-number-circle"><span class="day-number">24</span></span></span>
+                            </div>
+                            <div class="d-md-none hidden-desktop hidden-tablet">
+                                <span class="sr-only">Không có các sự kiện, Friday, 24 January</span>
+                                    <span aria-hidden="true"><span class="day-number-circle"><span class="day-number">24</span></span></span>
+                            </div>
+                        </td>
+                        <td class="day text-sm-center text-md-left weekend"
+                            data-day="25"
+                            data-day-timestamp="1737738000"
+                            data-drop-zone="month-view-day"
+                            data-region="day"
+                            data-new-event-timestamp="1737777755"
+                            >
+                            <div class="d-none d-md-block hidden-phone text-xs-center">
+                                <span class="sr-only">Không có các sự kiện, Saturday, 25 January</span>
+                                    <span aria-hidden="true"><span class="day-number-circle"><span class="day-number">25</span></span></span>
+                            </div>
+                            <div class="d-md-none hidden-desktop hidden-tablet">
+                                <span class="sr-only">Không có các sự kiện, Saturday, 25 January</span>
+                                    <span aria-hidden="true"><span class="day-number-circle"><span class="day-number">25</span></span></span>
+                            </div>
+                        </td>
+                        <td class="day text-sm-center text-md-left weekend"
+                            data-day="26"
+                            data-day-timestamp="1737824400"
+                            data-drop-zone="month-view-day"
+                            data-region="day"
+                            data-new-event-timestamp="1737864155"
+                            >
+                            <div class="d-none d-md-block hidden-phone text-xs-center">
+                                <span class="sr-only">Không có các sự kiện, Sunday, 26 January</span>
+                                    <span aria-hidden="true"><span class="day-number-circle"><span class="day-number">26</span></span></span>
+                            </div>
+                            <div class="d-md-none hidden-desktop hidden-tablet">
+                                <span class="sr-only">Không có các sự kiện, Sunday, 26 January</span>
+                                    <span aria-hidden="true"><span class="day-number-circle"><span class="day-number">26</span></span></span>
+                            </div>
+                        </td>
+                </tr>
+                <tr data-region="month-view-week">
+                        <td class="day text-sm-center text-md-left"
+                            data-day="27"
+                            data-day-timestamp="1737910800"
+                            data-drop-zone="month-view-day"
+                            data-region="day"
+                            data-new-event-timestamp="1737950555"
+                            >
+                            <div class="d-none d-md-block hidden-phone text-xs-center">
+                                <span class="sr-only">Không có các sự kiện, Monday, 27 January</span>
+                                    <span aria-hidden="true"><span class="day-number-circle"><span class="day-number">27</span></span></span>
+                            </div>
+                            <div class="d-md-none hidden-desktop hidden-tablet">
+                                <span class="sr-only">Không có các sự kiện, Monday, 27 January</span>
+                                    <span aria-hidden="true"><span class="day-number-circle"><span class="day-number">27</span></span></span>
+                            </div>
+                        </td>
+                        <td class="day text-sm-center text-md-left"
+                            data-day="28"
+                            data-day-timestamp="1737997200"
+                            data-drop-zone="month-view-day"
+                            data-region="day"
+                            data-new-event-timestamp="1738036955"
+                            >
+                            <div class="d-none d-md-block hidden-phone text-xs-center">
+                                <span class="sr-only">Không có các sự kiện, Tuesday, 28 January</span>
+                                    <span aria-hidden="true"><span class="day-number-circle"><span class="day-number">28</span></span></span>
+                            </div>
+                            <div class="d-md-none hidden-desktop hidden-tablet">
+                                <span class="sr-only">Không có các sự kiện, Tuesday, 28 January</span>
+                                    <span aria-hidden="true"><span class="day-number-circle"><span class="day-number">28</span></span></span>
+                            </div>
+                        </td>
+                        <td class="day text-sm-center text-md-left"
+                            data-day="29"
+                            data-day-timestamp="1738083600"
+                            data-drop-zone="month-view-day"
+                            data-region="day"
+                            data-new-event-timestamp="1738123355"
+                            >
+                            <div class="d-none d-md-block hidden-phone text-xs-center">
+                                <span class="sr-only">Không có các sự kiện, Wednesday, 29 January</span>
+                                    <span aria-hidden="true"><span class="day-number-circle"><span class="day-number">29</span></span></span>
+                            </div>
+                            <div class="d-md-none hidden-desktop hidden-tablet">
+                                <span class="sr-only">Không có các sự kiện, Wednesday, 29 January</span>
+                                    <span aria-hidden="true"><span class="day-number-circle"><span class="day-number">29</span></span></span>
+                            </div>
+                        </td>
+                        <td class="day text-sm-center text-md-left"
+                            data-day="30"
+                            data-day-timestamp="1738170000"
+                            data-drop-zone="month-view-day"
+                            data-region="day"
+                            data-new-event-timestamp="1738209755"
+                            >
+                            <div class="d-none d-md-block hidden-phone text-xs-center">
+                                <span class="sr-only">Không có các sự kiện, Thursday, 30 January</span>
+                                    <span aria-hidden="true"><span class="day-number-circle"><span class="day-number">30</span></span></span>
+                            </div>
+                            <div class="d-md-none hidden-desktop hidden-tablet">
+                                <span class="sr-only">Không có các sự kiện, Thursday, 30 January</span>
+                                    <span aria-hidden="true"><span class="day-number-circle"><span class="day-number">30</span></span></span>
+                            </div>
+                        </td>
+                        <td class="day text-sm-center text-md-left"
+                            data-day="31"
+                            data-day-timestamp="1738256400"
+                            data-drop-zone="month-view-day"
+                            data-region="day"
+                            data-new-event-timestamp="1738296155"
+                            >
+                            <div class="d-none d-md-block hidden-phone text-xs-center">
+                                <span class="sr-only">Không có các sự kiện, Friday, 31 January</span>
+                                    <span aria-hidden="true"><span class="day-number-circle"><span class="day-number">31</span></span></span>
+                            </div>
+                            <div class="d-md-none hidden-desktop hidden-tablet">
+                                <span class="sr-only">Không có các sự kiện, Friday, 31 January</span>
+                                    <span aria-hidden="true"><span class="day-number-circle"><span class="day-number">31</span></span></span>
+                            </div>
+                        </td>
+                        <td class="dayblank">&nbsp;</td>
+                        <td class="dayblank">&nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div></div>
+            <div class="footer"><div class="bottom">
+        <span class="footer-link">
+            <a href="https://lms.iuh.edu.vn/calendar/view.php?view=month&amp;time=1736222555">Full calendar</a>
+        </span>
+</div></div>
+            
+        </div>
+
+    </div>
+
+</section>
+
+  <span id="sb-2"></span><a href="#sb-3" class="sr-only sr-only-focusable">Bỏ qua Danh mục khoá học</a>
+
+<section id="inst191"
+     class=" block_course_list block list_block  card mb-3"
+     role="navigation"
+     data-block="course_list"
+     data-instance-id="191"
+          aria-labelledby="instance-191-header"
+     >
+
+    <div class="card-body p-3">
+
+            <h5 id="instance-191-header" class="card-title d-inline">Danh mục khoá học</h5>
+
+
+        <div class="card-text content mt-3">
+            <ul class="unlist"><li class="r0"><div class="column c1"><a  href="https://lms.iuh.edu.vn/course/index.php?categoryid=18"><i class="icon fa fa-graduation-cap fa-fw "  title="Khoá học" role="img" aria-label="Khoá học"></i>Khoa Công nghệ Cơ khí</a></div></li>
+<li class="r1"><div class="column c1"><a  href="https://lms.iuh.edu.vn/course/index.php?categoryid=19"><i class="icon fa fa-graduation-cap fa-fw "  title="Khoá học" role="img" aria-label="Khoá học"></i>Khoa Công nghệ Điện</a></div></li>
+<li class="r0"><div class="column c1"><a  href="https://lms.iuh.edu.vn/course/index.php?categoryid=20"><i class="icon fa fa-graduation-cap fa-fw "  title="Khoá học" role="img" aria-label="Khoá học"></i>Khoa Công nghệ Điện tử</a></div></li>
+<li class="r1"><div class="column c1"><a  href="https://lms.iuh.edu.vn/course/index.php?categoryid=21"><i class="icon fa fa-graduation-cap fa-fw "  title="Khoá học" role="img" aria-label="Khoá học"></i>Khoa Công nghệ Động Lực</a></div></li>
+<li class="r0"><div class="column c1"><a  href="https://lms.iuh.edu.vn/course/index.php?categoryid=23"><i class="icon fa fa-graduation-cap fa-fw "  title="Khoá học" role="img" aria-label="Khoá học"></i>Khoa Công nghệ Hóa học</a></div></li>
+<li class="r1"><div class="column c1"><a  href="https://lms.iuh.edu.vn/course/index.php?categoryid=24"><i class="icon fa fa-graduation-cap fa-fw "  title="Khoá học" role="img" aria-label="Khoá học"></i>Khoa Công nghệ Nhiệt lạnh</a></div></li>
+<li class="r0"><div class="column c1"><a  href="https://lms.iuh.edu.vn/course/index.php?categoryid=1"><i class="icon fa fa-graduation-cap fa-fw "  title="Khoá học" role="img" aria-label="Khoá học"></i>Khoa Công nghệ thông tin</a></div></li>
+<li class="r1"><div class="column c1"><a  href="https://lms.iuh.edu.vn/course/index.php?categoryid=10"><i class="icon fa fa-graduation-cap fa-fw "  title="Khoá học" role="img" aria-label="Khoá học"></i>Khoa Khoa học Cơ bản</a></div></li>
+<li class="r0"><div class="column c1"><a  href="https://lms.iuh.edu.vn/course/index.php?categoryid=26"><i class="icon fa fa-graduation-cap fa-fw "  title="Khoá học" role="img" aria-label="Khoá học"></i>Khoa Kỹ thuật Xây dựng</a></div></li>
+<li class="r1"><div class="column c1"><a  href="https://lms.iuh.edu.vn/course/index.php?categoryid=11"><i class="icon fa fa-graduation-cap fa-fw "  title="Khoá học" role="img" aria-label="Khoá học"></i>Khoa Luật và Khoa Học Chính trị</a></div></li>
+<li class="r0"><div class="column c1"><a  href="https://lms.iuh.edu.vn/course/index.php?categoryid=25"><i class="icon fa fa-graduation-cap fa-fw "  title="Khoá học" role="img" aria-label="Khoá học"></i>Khoa May thời trang</a></div></li>
+<li class="r1"><div class="column c1"><a  href="https://lms.iuh.edu.vn/course/index.php?categoryid=12"><i class="icon fa fa-graduation-cap fa-fw "  title="Khoá học" role="img" aria-label="Khoá học"></i>Khoa Ngoại ngữ</a></div></li>
+<li class="r0"><div class="column c1"><a  href="https://lms.iuh.edu.vn/course/index.php?categoryid=13"><i class="icon fa fa-graduation-cap fa-fw "  title="Khoá học" role="img" aria-label="Khoá học"></i>Khoa Quản trị Kinh doanh</a></div></li>
+<li class="r1"><div class="column c1"><a  href="https://lms.iuh.edu.vn/course/index.php?categoryid=16"><i class="icon fa fa-graduation-cap fa-fw "  title="Khoá học" role="img" aria-label="Khoá học"></i>Khoa Thương mại du lịch</a></div></li>
+<li class="r0"><div class="column c1"><a  href="https://lms.iuh.edu.vn/course/index.php?categoryid=15"><i class="icon fa fa-graduation-cap fa-fw "  title="Khoá học" role="img" aria-label="Khoá học"></i>Viện Tài chính - Kế toán</a></div></li>
+<li class="r1"><div class="column c1"><a  href="https://lms.iuh.edu.vn/course/index.php?categoryid=27"><i class="icon fa fa-graduation-cap fa-fw "  title="Khoá học" role="img" aria-label="Khoá học"></i>Viện CNSH&amp;TP</a></div></li>
+<li class="r0"><div class="column c1"><a  href="https://lms.iuh.edu.vn/course/index.php?categoryid=28"><i class="icon fa fa-graduation-cap fa-fw "  title="Khoá học" role="img" aria-label="Khoá học"></i>Viện KHCN&amp;QLMT</a></div></li>
+<li class="r1"><div class="column c1"><a  href="https://lms.iuh.edu.vn/course/index.php?categoryid=54"><i class="icon fa fa-graduation-cap fa-fw "  title="Khoá học" role="img" aria-label="Khoá học"></i>Trung tâm Kết nối DN và Giới thiệu VL</a></div></li>
+<li class="r0"><div class="column c1"><a  href="https://lms.iuh.edu.vn/course/index.php?categoryid=58"><i class="icon fa fa-graduation-cap fa-fw "  title="Khoá học" role="img" aria-label="Khoá học"></i>Phân hiệu Quảng Ngãi</a></div></li>
+<li class="r1"><div class="column c1"><a  href="https://lms.iuh.edu.vn/course/index.php?categoryid=134"><i class="icon fa fa-graduation-cap fa-fw "  title="Khoá học" role="img" aria-label="Khoá học"></i>Cơ sở Thanh Hóa</a></div></li>
+<li class="r0"><div class="column c1"><a  href="https://lms.iuh.edu.vn/course/index.php?categoryid=31"><i class="icon fa fa-graduation-cap fa-fw "  title="Khoá học" role="img" aria-label="Khoá học"></i>Khóa học khác</a></div></li>
+<li class="r1"><div class="column c1"><a  href="https://lms.iuh.edu.vn/course/index.php?categoryid=116"><i class="icon fa fa-graduation-cap fa-fw "  title="Khoá học" role="img" aria-label="Khoá học"></i>Phòng Khảo thí và Đảm bảo chất lượng</a></div></li>
+<li class="r0"><div class="column c1"><a  href="https://lms.iuh.edu.vn/course/index.php?categoryid=118"><i class="icon fa fa-graduation-cap fa-fw "  title="Khoá học" role="img" aria-label="Khoá học"></i>Phòng Quản lý Sau đại học</a></div></li>
+<li class="r1"><div class="column c1"><a  href="https://lms.iuh.edu.vn/course/index.php?categoryid=108"><i class="icon fa fa-graduation-cap fa-fw "  title="Khoá học" role="img" aria-label="Khoá học"></i>Trung tâm GDQP&amp;TC</a></div></li></ul>
+            <div class="footer"><a href="https://lms.iuh.edu.vn/course/index.php">Tất cả các khoá học</a> ...</div>
+            
+        </div>
+
+    </div>
+
+</section>
+
+  <span id="sb-3"></span><a href="#sb-4" class="sr-only sr-only-focusable">Bỏ qua Hoạt động</a>
+
+<section id="inst256"
+     class=" block_activity_modules block list_block  card mb-3"
+     role="navigation"
+     data-block="activity_modules"
+     data-instance-id="256"
+          aria-labelledby="instance-256-header"
+     >
+
+    <div class="card-body p-3">
+
+            <h5 id="instance-256-header" class="card-title d-inline">Hoạt động</h5>
+
+
+        <div class="card-text content mt-3">
+            <ul class="unlist"><li class="r0"><div class="column c1"><a href="https://lms.iuh.edu.vn/mod/forum/index.php?id=1"><img class="icon " alt="Diễn đàn" title="Diễn đàn" src="https://lms.iuh.edu.vn/theme/image.php/academi/forum/1697014882/monologo" />Diễn đàn</a></div></li></ul>
+            <div class="footer"></div>
+            
+        </div>
+
+    </div>
+
+</section>
+
+  <span id="sb-4"></span></aside>
+                </section>
+
+    </div>
+</div>
+    <div id="page" data-region="mainpage" data-usertour="scroller" class="drawers   drag-container">
+        <div id="topofscroll" class="main-inner">
+            <div class="drawer-toggles d-flex">
+                    <div class="drawer-toggler drawer-right-toggle ml-auto d-print-none">
+                        <button
+                            class="btn icon-no-margin"
+                            data-toggler="drawers"
+                            data-action="toggle"
+                            data-target="theme_boost-drawers-blocks"
+                            data-toggle="tooltip"
+                            data-placement="right"
+                            title="Mở ngăn kéo tài liệu"
+                        >
+                            <span class="sr-only">Mở ngăn kéo tài liệu</span>
+                            <span class="dir-rtl-hide"><i class="icon fa fa-chevron-left fa-fw " aria-hidden="true"  ></i></span>
+                            <span class="dir-ltr-hide"><i class="icon fa fa-chevron-right fa-fw " aria-hidden="true"  ></i></span>
+                        </button>
+                    </div>
+            </div>
+            <header id="page-header" class="header-maxwidth d-print-none">
+    <div class="w-100">
+        <div class="d-flex flex-wrap">
+            <div class="ml-auto d-flex">
+                
+            </div>
+            <div id="course-header">
+                
+            </div>
+        </div>
+        <div class="d-flex align-items-center">
+                    <div class="mr-auto">
+                        <div class="page-context-header"><div class="page-header-headings"><h1 class="h2">Hệ Thống Học Tập Trực Tuyến - IUH</h1></div></div>
+                    </div>
+            <div class="header-actions-container ml-auto" data-region="header-actions-container">
+            </div>
+        </div>
+    </div>
+</header>
+            <div id="page-content" class="pb-3 d-print-block">
+                <div id="region-main-box">
+                    <section id="region-main" aria-label="Nội dung">
+
+                        <span class="notifications" id="user-notifications"></span>
+                        <div role="main"><span id="maincontent"></span><div class="course-content">
+    <div class="sitetopic">
+        <ul class="topics frontpage">
+                <li id="section-1"
+                    class="section course-section main  clearfix
+                             
+                            "
+                    data-sectionid="1"
+                    data-sectionreturnid="1"
+                    data-for="section"
+                    data-id="6"
+                    data-number="1"
+                >
+                    <div class="course-section-header d-flex"
+                        data-for="section_title"
+                        data-id="6"
+                        data-number="1"
+                    >
+                                
+                                        <h2 id="sectionid-6-title" class="sectionname">
+                                            Giới thiệu chung
+                                        </h2>
+                            <div data-region="sectionbadges" class="sectionbadges d-flex align-items-center">
+                            </div>
+                            </div>
+                            <div id="coursecontentcollapse1"
+                                class="content 
+                                    
+                                ">
+                                <div class=" my-3" data-for="sectioninfo">
+                                            <div class="course-description-item summarytext">
+                                                <div class="description-inner">
+                                                    <div class="no-overflow">Chào mừng các bạn đến với kênh học tập trực tuyến của Trường Đại học Công nghiệp TP.HCM, hệ thống cung cấp cho sinh viên những khóa học trực tuyến song song với các lớp học trên lớp mà sinh viên đang học tại trường, trong thời gian tham gia khoa học, sinh viên vui lòng làm bài tập theo yêu cầu đầy đủ. Chúc các bạn có nhiều kiến thức trên kênh học trực tuyến này.<br><p><br></p></div>
+                                                </div>
+                                            </div>
+                                        <div class="section_availability course-description-item">
+                                        </div>
+                            </div>
+                                    <ul class="section m-0 p-0 img-text " data-for="cmlist">
+                                        </ul>
+                            
+                    </div>
+                </li>
+        </ul>
+    </div>
+</div><a class="skip-block skip aabtn" href="#skipcourses">Bỏ qua khoá học</a><div id="frontpage-category-combo"><h2>Khoá học</h2><div class="course_category_tree clearfix frontpage-category-combo"><div class="collapsible-actions"><a class="collapseexpand aabtn" href="#">Mở rộng tất cả</a></div><div class="content"><div class="subcategories"><div class="category notloaded with_children collapsed" data-categoryid="18" data-depth="1" data-showcourses="10" data-type="0"><div class="info"><h3 class="categoryname aabtn"><a href="https://lms.iuh.edu.vn/course/index.php?categoryid=18">Khoa Công nghệ Cơ khí</a></h3></div><div class="content"></div></div><div class="category notloaded with_children collapsed" data-categoryid="19" data-depth="1" data-showcourses="10" data-type="0"><div class="info"><h3 class="categoryname aabtn"><a href="https://lms.iuh.edu.vn/course/index.php?categoryid=19">Khoa Công nghệ Điện</a></h3></div><div class="content"></div></div><div class="category notloaded with_children collapsed" data-categoryid="20" data-depth="1" data-showcourses="10" data-type="0"><div class="info"><h3 class="categoryname aabtn"><a href="https://lms.iuh.edu.vn/course/index.php?categoryid=20">Khoa Công nghệ Điện tử</a></h3></div><div class="content"></div></div><div class="category notloaded with_children collapsed" data-categoryid="21" data-depth="1" data-showcourses="10" data-type="0"><div class="info"><h3 class="categoryname aabtn"><a href="https://lms.iuh.edu.vn/course/index.php?categoryid=21">Khoa Công nghệ Động Lực</a></h3></div><div class="content"></div></div><div class="category notloaded with_children collapsed" data-categoryid="23" data-depth="1" data-showcourses="10" data-type="0"><div class="info"><h3 class="categoryname aabtn"><a href="https://lms.iuh.edu.vn/course/index.php?categoryid=23">Khoa Công nghệ Hóa học</a></h3></div><div class="content"></div></div><div class="category notloaded with_children collapsed" data-categoryid="24" data-depth="1" data-showcourses="10" data-type="0"><div class="info"><h3 class="categoryname aabtn"><a href="https://lms.iuh.edu.vn/course/index.php?categoryid=24">Khoa Công nghệ Nhiệt lạnh</a></h3></div><div class="content"></div></div><div class="category notloaded with_children collapsed" data-categoryid="1" data-depth="1" data-showcourses="10" data-type="0"><div class="info"><h3 class="categoryname aabtn"><a href="https://lms.iuh.edu.vn/course/index.php?categoryid=1">Khoa Công nghệ thông tin</a></h3></div><div class="content"></div></div><div class="category notloaded with_children collapsed" data-categoryid="10" data-depth="1" data-showcourses="10" data-type="0"><div class="info"><h3 class="categoryname aabtn"><a href="https://lms.iuh.edu.vn/course/index.php?categoryid=10">Khoa Khoa học Cơ bản</a></h3></div><div class="content"></div></div><div class="category notloaded with_children collapsed" data-categoryid="26" data-depth="1" data-showcourses="10" data-type="0"><div class="info"><h3 class="categoryname aabtn"><a href="https://lms.iuh.edu.vn/course/index.php?categoryid=26">Khoa Kỹ thuật Xây dựng</a></h3></div><div class="content"></div></div><div class="category notloaded with_children collapsed" data-categoryid="11" data-depth="1" data-showcourses="10" data-type="0"><div class="info"><h3 class="categoryname aabtn"><a href="https://lms.iuh.edu.vn/course/index.php?categoryid=11">Khoa Luật và Khoa Học Chính trị</a></h3></div><div class="content"></div></div><div class="category notloaded with_children collapsed" data-categoryid="25" data-depth="1" data-showcourses="10" data-type="0"><div class="info"><h3 class="categoryname aabtn"><a href="https://lms.iuh.edu.vn/course/index.php?categoryid=25">Khoa May thời trang</a></h3></div><div class="content"></div></div><div class="category notloaded with_children collapsed" data-categoryid="12" data-depth="1" data-showcourses="10" data-type="0"><div class="info"><h3 class="categoryname aabtn"><a href="https://lms.iuh.edu.vn/course/index.php?categoryid=12">Khoa Ngoại ngữ</a></h3></div><div class="content"></div></div><div class="category notloaded with_children collapsed" data-categoryid="13" data-depth="1" data-showcourses="10" data-type="0"><div class="info"><h3 class="categoryname aabtn"><a href="https://lms.iuh.edu.vn/course/index.php?categoryid=13">Khoa Quản trị Kinh doanh</a></h3></div><div class="content"></div></div><div class="category notloaded with_children collapsed" data-categoryid="16" data-depth="1" data-showcourses="10" data-type="0"><div class="info"><h3 class="categoryname aabtn"><a href="https://lms.iuh.edu.vn/course/index.php?categoryid=16">Khoa Thương mại du lịch</a></h3></div><div class="content"></div></div><div class="category notloaded with_children collapsed" data-categoryid="15" data-depth="1" data-showcourses="10" data-type="0"><div class="info"><h3 class="categoryname aabtn"><a href="https://lms.iuh.edu.vn/course/index.php?categoryid=15">Viện Tài chính - Kế toán</a></h3></div><div class="content"></div></div><div class="category notloaded with_children collapsed" data-categoryid="27" data-depth="1" data-showcourses="10" data-type="0"><div class="info"><h3 class="categoryname aabtn"><a href="https://lms.iuh.edu.vn/course/index.php?categoryid=27">Viện CNSH&amp;TP</a></h3></div><div class="content"></div></div><div class="category notloaded with_children collapsed" data-categoryid="28" data-depth="1" data-showcourses="10" data-type="0"><div class="info"><h3 class="categoryname aabtn"><a href="https://lms.iuh.edu.vn/course/index.php?categoryid=28">Viện KHCN&amp;QLMT</a></h3></div><div class="content"></div></div><div class="category notloaded with_children collapsed" data-categoryid="54" data-depth="1" data-showcourses="10" data-type="0"><div class="info"><h3 class="categoryname aabtn"><a href="https://lms.iuh.edu.vn/course/index.php?categoryid=54">Trung tâm Kết nối DN và Giới thiệu VL</a></h3></div><div class="content"></div></div><div class="category notloaded with_children collapsed" data-categoryid="58" data-depth="1" data-showcourses="10" data-type="0"><div class="info"><h3 class="categoryname aabtn"><a href="https://lms.iuh.edu.vn/course/index.php?categoryid=58">Phân hiệu Quảng Ngãi</a></h3></div><div class="content"></div></div><div class="category notloaded with_children collapsed" data-categoryid="134" data-depth="1" data-showcourses="10" data-type="0"><div class="info"><h3 class="categoryname aabtn"><a href="https://lms.iuh.edu.vn/course/index.php?categoryid=134">Cơ sở Thanh Hóa</a></h3></div><div class="content"></div></div><div class="category notloaded with_children collapsed" data-categoryid="31" data-depth="1" data-showcourses="10" data-type="0"><div class="info"><h3 class="categoryname aabtn"><a href="https://lms.iuh.edu.vn/course/index.php?categoryid=31">Khóa học khác</a></h3></div><div class="content"></div></div><div class="category notloaded with_children collapsed" data-categoryid="116" data-depth="1" data-showcourses="10" data-type="0"><div class="info"><h3 class="categoryname aabtn"><a href="https://lms.iuh.edu.vn/course/index.php?categoryid=116">Phòng Khảo thí và Đảm bảo chất lượng</a></h3></div><div class="content"></div></div><div class="paging paging-morelink"><a href="https://lms.iuh.edu.vn/course/index.php?browse=categories&amp;page=1&amp;categoryid=0">Xem thêm</a></div></div></div></div></div><span class="skip-block-to" id="skipcourses"></span><br /><a class="skip-block skip aabtn" href="#skipsitenews">Bỏ qua tin tức chung</a><div id="site-news-forum"><h2>Tin tức chung</h2><div id="discussion-list-677ca75bc9a37677ca75b9d11e6" data-contextid="56" data-cmid="6" data-name="Tin tức chung" data-group="" data-grading-component="" data-grading-component-subtype="" data-gradable-itemtype="forum" data-initialuserid="1965" >
+
+
+    
+
+
+    <div class="py-3">
+    </div>
+
+           <article
+    id="p83147"
+    class="forum-post-container mb-2"
+    data-post-id="83147"
+    data-region="post"
+    data-target="83147-target"
+    tabindex="0"
+    aria-labelledby="post-header-83147-677ca75bc9a37677ca75b9d11e6"
+    aria-describedby="post-content-83147"
+>
+    <div
+        class="d-flex border p-2 mb-2 forumpost focus-target  "
+        aria-label='Quy định về việc quản lý và sử dụng Hệ thống thư điện tử của Trường Đại học Công nghiệp TP.HCM ban hành ngày 20/06/2024 bởi Mai Hoàng Thụy Khanh'
+        data-post-id="83147" data-content="forum-post"
+    >
+        
+
+        <div class="d-flex flex-column w-100"  data-region-content="forum-post-core">
+            <header id="post-header-83147-677ca75bc9a37677ca75b9d11e6" class="mb-2 header row d-flex">
+                        <div class="mr-2" style="width: 45px;">
+                                <img
+                                    class="rounded-circle w-100"
+                                    src="https://lms.iuh.edu.vn/theme/image.php/academi/core/1697014882/u/f1"
+                                    alt="Hình của Mai Hoàng Thụy Khanh"
+                                    aria-hidden="true"
+                                    title="Hình của Mai Hoàng Thụy Khanh"
+                                >
+                        </div>
+                <div class="d-flex flex-column">
+                        <h3 class="h6 font-weight-bold mb-0" data-region-content="forum-post-core-subject" data-reply-subject="Trả lời: Quy định về việc quản lý và sử dụng Hệ thống thư điện tử của Trường Đại học Công nghiệp TP.HCM ban hành ngày 20/06/2024" >Quy định về việc quản lý và sử dụng Hệ thống thư điện tử của Trường Đại học Công nghiệp TP.HCM ban hành ngày 20/06/2024</h3>
+                        <div class="mb-3" tabindex="-1">
+                            Bởi <a href="https://lms.iuh.edu.vn/user/view.php?id=1965&course=1">Mai Hoàng Thụy Khanh</a> - <time datetime="2024-06-26T13:52:14+07:00">Wednesday, 26 June 2024, 1:52 PM</time>
+                        </div>
+                </div>
+            </header>
+
+            <div class="d-flex body-content-container">
+                        <div class="mr-2 author-groups-container" style="width: 45px; flex-shrink: 0">
+                        </div>
+
+                <div class="no-overflow w-100 content-alignment-container">
+                    <div id="post-content-83147" class="post-content-container">
+                        <p dir="ltr" style="text-align:left;"></p><p>Quy định về việc quản lý và sử dụng Hệ thống thư điện tử của Trường Đại học Công nghiệp TP.HCM ban hành ngày 20/06/2024</p><br /><p></p>
+                    </div>
+
+
+
+                        
+
+                                <div>
+                                    <a
+                                        href="https://lms.iuh.edu.vn/pluginfile.php/56/mod_forum/attachment/83147/1440_quydinhvequanlyvasudunghethongthudientu.pdf?forcedownload=1"
+                                        aria-label="File đính kém 1440_quydinhvequanlyvasudunghethongthudientu.pdf"
+                                    >
+                                        <img class="icon " alt="" aria-hidden="true" src="https://lms.iuh.edu.vn/theme/image.php/academi/core/1697014882/f/pdf-128" /> 1440_quydinhvequanlyvasudunghethongthudientu.pdf
+                                    </a>
+                                </div>
+
+                            <div class="d-flex flex-wrap">
+                                    <div
+                                        class="post-actions d-flex align-self-end justify-content-end flex-wrap ml-auto"
+                                        data-region="post-actions-container"
+                                        role="menubar"
+                                        aria-label='Quy định về việc quản lý và sử dụng Hệ thống thư điện tử của Trường Đại học Công nghiệp TP.HCM ban hành ngày 20/06/2024 bởi Mai Hoàng Thụy Khanh'
+                                        aria-controls="p83147"
+                                    >
+                                                <a
+                                                    data-region="post-action"
+                                                    href="https://lms.iuh.edu.vn/mod/forum/discuss.php?d=42730#p83147"
+                                                    class="btn btn-link"
+                                                    title="Permanent link to this post"
+                                                    aria-label="Permanent link to this post"
+                                                    role="menuitem"
+                                                >
+                                                    Permalink
+                                                </a>
+                                    </div>
+                            </div>
+
+                                           <div class="link text-right">
+                       <a href="https://lms.iuh.edu.vn/mod/forum/discuss.php?d=42730"
+                          aria-label="Thảo luận về chủ đề: Quy định về việc quản lý và sử dụng Hệ thống thư điện tử của Trường Đại học Công nghiệp TP.HCM ban hành ngày 20/06/2024">
+                           Thảo luận về chủ đề này
+                       </a>&nbsp;(0  phúc đáp)
+                   </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <div data-region="replies-container">
+        </div>
+</article>
+           <article
+    id="p25974"
+    class="forum-post-container mb-2"
+    data-post-id="25974"
+    data-region="post"
+    data-target="25974-target"
+    tabindex="0"
+    aria-labelledby="post-header-25974-677ca75bc9a37677ca75b9d11e6"
+    aria-describedby="post-content-25974"
+>
+    <div
+        class="d-flex border p-2 mb-2 forumpost focus-target  "
+        aria-label='Hướng dẫn sử dụng app Moodle trên hệ thống học tập trực tuyến LMS bởi Mai Hoàng Thụy Khanh'
+        data-post-id="25974" data-content="forum-post"
+    >
+        
+
+        <div class="d-flex flex-column w-100"  data-region-content="forum-post-core">
+            <header id="post-header-25974-677ca75bc9a37677ca75b9d11e6" class="mb-2 header row d-flex">
+                        <div class="mr-2" style="width: 45px;">
+                                <img
+                                    class="rounded-circle w-100"
+                                    src="https://lms.iuh.edu.vn/theme/image.php/academi/core/1697014882/u/f1"
+                                    alt="Hình của Mai Hoàng Thụy Khanh"
+                                    aria-hidden="true"
+                                    title="Hình của Mai Hoàng Thụy Khanh"
+                                >
+                        </div>
+                <div class="d-flex flex-column">
+                        <h3 class="h6 font-weight-bold mb-0" data-region-content="forum-post-core-subject" data-reply-subject="Trả lời: Hướng dẫn sử dụng app Moodle trên hệ thống học tập trực tuyến LMS" >Hướng dẫn sử dụng app Moodle trên hệ thống học tập trực tuyến LMS</h3>
+                        <div class="mb-3" tabindex="-1">
+                            Bởi <a href="https://lms.iuh.edu.vn/user/view.php?id=1965&course=1">Mai Hoàng Thụy Khanh</a> - <time datetime="2021-08-26T18:31:22+07:00">Thursday, 26 August 2021, 6:31 PM</time>
+                        </div>
+                </div>
+            </header>
+
+            <div class="d-flex body-content-container">
+                        <div class="mr-2 author-groups-container" style="width: 45px; flex-shrink: 0">
+                        </div>
+
+                <div class="no-overflow w-100 content-alignment-container">
+                    <div id="post-content-25974" class="post-content-container">
+                        <p>Trung tâm Quản trị Hệ thống - Trường Đại học Công nghiệp TP.HCM xin giới thiệu cách cài đặt và sử dụng app Moodle trên hệ thống học tập trực tuyến lms.iuh.edu.vn</p><p>Link chi tiết: <a href="https://csm.iuh.edu.vn/quy-dinh-huong-dan/huong-dan-su-dung-app-moodle-tren-nen-tang-mobile">https://csm.iuh.edu.vn/quy-dinh-huong-dan/huong-dan-su-dung-app-moodle-tren-nen-tang-mobile</a></p>
+                    </div>
+
+
+
+                        
+
+
+                            <div class="d-flex flex-wrap">
+                                    <div
+                                        class="post-actions d-flex align-self-end justify-content-end flex-wrap ml-auto"
+                                        data-region="post-actions-container"
+                                        role="menubar"
+                                        aria-label='Hướng dẫn sử dụng app Moodle trên hệ thống học tập trực tuyến LMS bởi Mai Hoàng Thụy Khanh'
+                                        aria-controls="p25974"
+                                    >
+                                                <a
+                                                    data-region="post-action"
+                                                    href="https://lms.iuh.edu.vn/mod/forum/discuss.php?d=11586#p25974"
+                                                    class="btn btn-link"
+                                                    title="Permanent link to this post"
+                                                    aria-label="Permanent link to this post"
+                                                    role="menuitem"
+                                                >
+                                                    Permalink
+                                                </a>
+                                    </div>
+                            </div>
+
+                                           <div class="link text-right">
+                       <a href="https://lms.iuh.edu.vn/mod/forum/discuss.php?d=11586"
+                          aria-label="Thảo luận về chủ đề: Hướng dẫn sử dụng app Moodle trên hệ thống học tập trực tuyến LMS">
+                           Thảo luận về chủ đề này
+                       </a>&nbsp;(0  phúc đáp)
+                   </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <div data-region="replies-container">
+        </div>
+</article>
+           <article
+    id="p19931"
+    class="forum-post-container mb-2"
+    data-post-id="19931"
+    data-region="post"
+    data-target="19931-target"
+    tabindex="0"
+    aria-labelledby="post-header-19931-677ca75bc9a37677ca75b9d11e6"
+    aria-describedby="post-content-19931"
+>
+    <div
+        class="d-flex border p-2 mb-2 forumpost focus-target  "
+        aria-label='Hướng dẫn công cụ nén file pdf cực tốt bởi Admin Root'
+        data-post-id="19931" data-content="forum-post"
+    >
+        
+
+        <div class="d-flex flex-column w-100"  data-region-content="forum-post-core">
+            <header id="post-header-19931-677ca75bc9a37677ca75b9d11e6" class="mb-2 header row d-flex">
+                        <div class="mr-2" style="width: 45px;">
+                                <img
+                                    class="rounded-circle w-100"
+                                    src="https://lms.iuh.edu.vn/pluginfile.php/5/user/icon/academi/f1?rev=1428"
+                                    alt="Hình của Admin Root"
+                                    aria-hidden="true"
+                                    title="Hình của Admin Root"
+                                >
+                        </div>
+                <div class="d-flex flex-column">
+                        <h3 class="h6 font-weight-bold mb-0" data-region-content="forum-post-core-subject" data-reply-subject="Trả lời: Hướng dẫn công cụ nén file pdf cực tốt" >Hướng dẫn công cụ nén file pdf cực tốt</h3>
+                        <div class="mb-3" tabindex="-1">
+                            Bởi <a href="https://lms.iuh.edu.vn/user/view.php?id=2&course=1">Admin Root</a> - <time datetime="2021-06-09T08:53:57+07:00">Wednesday, 9 June 2021, 8:53 AM</time>
+                        </div>
+                </div>
+            </header>
+
+            <div class="d-flex body-content-container">
+                        <div class="mr-2 author-groups-container" style="width: 45px; flex-shrink: 0">
+                        </div>
+
+                <div class="no-overflow w-100 content-alignment-container">
+                    <div id="post-content-19931" class="post-content-container">
+                        <p>Các bạn sinh viên đang làm bài tập tiểu luận ?, file của bạn rất lớn &gt; 10MB, làm cách nào để có thể nén được file pdf nhưng vẫn đảm bảo chất lượng file ?. Trung tâm Quản trị Hệ thống xin giới thiệu các bạn công cụ nén file hiệu quả sau, Link nén file online: <a href="https://tools.pdf24.org/vi/nen-pdf">https://tools.pdf24.org/vi/nen-pdf </a>, ngoài ra nếu bạn muốn dùng offline vẫn có thể download phần mềm này vể để sử dụng được luôn nhé.<br /></p>
+                    </div>
+
+
+
+                        
+
+
+                            <div class="d-flex flex-wrap">
+                                    <div
+                                        class="post-actions d-flex align-self-end justify-content-end flex-wrap ml-auto"
+                                        data-region="post-actions-container"
+                                        role="menubar"
+                                        aria-label='Hướng dẫn công cụ nén file pdf cực tốt bởi Admin Root'
+                                        aria-controls="p19931"
+                                    >
+                                                <a
+                                                    data-region="post-action"
+                                                    href="https://lms.iuh.edu.vn/mod/forum/discuss.php?d=7155#p19931"
+                                                    class="btn btn-link"
+                                                    title="Permanent link to this post"
+                                                    aria-label="Permanent link to this post"
+                                                    role="menuitem"
+                                                >
+                                                    Permalink
+                                                </a>
+                                    </div>
+                            </div>
+
+                                           <div class="link text-right">
+                       <a href="https://lms.iuh.edu.vn/mod/forum/discuss.php?d=7155"
+                          aria-label="Thảo luận về chủ đề: Hướng dẫn công cụ nén file pdf cực tốt">
+                           Thảo luận về chủ đề này
+                       </a>&nbsp;(0  phúc đáp)
+                   </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <div data-region="replies-container">
+        </div>
+</article>
+            <a href="https://lms.iuh.edu.vn/mod/forum/view.php?id=6">Các chủ đề trước đây...</a>
+
+</div></div><span class="skip-block-to" id="skipsitenews"></span><br /></div>
+                        
+                        
+
+                    </section>
+                </div>
+            </div>
+        </div>
+        
+        <footer id="page-footer" class="footer-popover footer-dark bg-dark text-light">
+          <div id="footer">
+              <div class="footer-main">
+              <div class="container-fluid">
+              <div id="course-footer"></div>
+                  <div class="row">
+        
+                  <div class="col-md-5">
+                      <div class="infoarea">
+                      <div class="footer-logo">
+                          <a href="#"><img src="//lms.iuh.edu.vn/pluginfile.php/1/theme_academi/logo/1697014882/Logo_IUH.png" width="100" height="100" alt="Academi"></a>
+                      </div>
+        
+                          <p>Chào mừng các bạn đến với Hệ thống học tập trực tuyến của trường Đại học Công 
+nghiệp TP.HCM, kênh thông tin cung cấp các khóa học trực tuyến của nhà trường cho các bạn sinh viên.<br></p>
+                    </div>
+                  </div>
+        
+                  <div class="col-md-3">
+                      <div class="foot-links">
+                      <h2>Liên kết</h2>
+                      <ul>
+                          <li><a href="http://iuh.edu.vn/" target="_blank">Website Nhà Trường</a></li><li><a href="https://csm.iuh.edu.vn/" target="_blank">Website Trung tâm QTHT</a></li><li><a href="https://sv.iuh.edu.vn/" target="_blank">Cổng Thông Tin Sinh Viên</a></li><li><a href="https://lms.iuh.edu.vn/course/" target="_blank">Các Khóa Học</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="contact-info">
+                      <h2 class="nopadding">Liên hệ</h2>
+        
+                      <p>Trung tâm Quản trị Hệ thống - Trường Đại học Công nghiệp TP.HCM<br>
+                        <i class="fa fa-phone-square"></i> Phone : 0283.8940 390 - ext 838<br>
+                        <i class="fa fa-envelope"></i> E-mail : <a class="mail-link" href="mailto:csm@iuh.edu.vn">csm@iuh.edu.vn</a><br>
+                      </p>
+        
+                    </div>
+                    <div class="social-media">
+                      <h6>Follow us</h6>
+                      <ul>
+                          <li class="smedia-01"><a href="https://www.facebook.com/csm.iuh.edu.vn"><i class="fa fa-facebook-square"></i></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        
+              <div class="footer-bootom">
+                  <p>Copyright &copy; 2020 - Phát triển bởi Trung tâm Quản trị Hệ thống - ĐHCN TP.HCM</p>
+                <div class="footer-content-debugging py-sm-3">
+                    <div class="container">
+                        
+                    </div>
+                </div>
+              </div>
+        
+              <div data-region="footer-container-popover">
+                <button class="btn btn-icon bg-secondary icon-no-margin btn-footer-popover" data-action="footer-popover" aria-label="Show footer">
+                    <i class="icon fa fa-question fa-fw " aria-hidden="true"  ></i>
+                </button>
+              </div>
+              <div class="footer-content-popover container" data-region="footer-content-popover" style="display: none;">
+                    <div class="footer-section p-3 border-bottom">
+        
+        
+                            <div><a href="#" target="blank"><i class="icon fa fa-envelope-o fa-fw " aria-hidden="true"  ></i>Contact site support<i class="icon fa fa-external-link fa-fw ml-1" aria-hidden="true"  ></i></a></div>
+                    </div>
+                <div class="footer-section p-3 border-bottom">
+                    <div class="logininfo">
+                        <div class="logininfo">Bạn chưa đăng nhập. (<a href="https://lms.iuh.edu.vn/login/index.php">Đăng nhập</a>)</div>
+                    </div>
+                    <div class="tool_usertours-resettourcontainer">
+                    </div>
+        
+                    <div class="tool_dataprivacy"><a href="https://lms.iuh.edu.vn/admin/tool/dataprivacy/summary.php">Data retention summary</a></div><a href="https://download.moodle.org/mobile?version=2022041906.02&amp;lang=vi&amp;iosappid=633359593&amp;androidappid=com.moodle.moodlemobile">Get the mobile app</a>
+                    <script>
+//<![CDATA[
+var require = {
+    baseUrl : 'https://lms.iuh.edu.vn/lib/requirejs.php/1697014882/',
+    // We only support AMD modules with an explicit define() statement.
+    enforceDefine: true,
+    skipDataMain: true,
+    waitSeconds : 0,
+
+    paths: {
+        jquery: 'https://lms.iuh.edu.vn/lib/javascript.php/1697014882/lib/jquery/jquery-3.6.0.min',
+        jqueryui: 'https://lms.iuh.edu.vn/lib/javascript.php/1697014882/lib/jquery/ui-1.13.0/jquery-ui.min',
+        jqueryprivate: 'https://lms.iuh.edu.vn/lib/javascript.php/1697014882/lib/requirejs/jquery-private'
+    },
+
+    // Custom jquery config map.
+    map: {
+      // '*' means all modules will get 'jqueryprivate'
+      // for their 'jquery' dependency.
+      '*': { jquery: 'jqueryprivate' },
+      // Stub module for 'process'. This is a workaround for a bug in MathJax (see MDL-60458).
+      '*': { process: 'core/first' },
+
+      // 'jquery-private' wants the real jQuery module
+      // though. If this line was not here, there would
+      // be an unresolvable cyclic dependency.
+      jqueryprivate: { jquery: 'jquery' }
+    }
+};
+
+//]]>
+</script>
+<script src="https://lms.iuh.edu.vn/lib/javascript.php/1697014882/lib/requirejs/require.min.js"></script>
+<script>
+//<![CDATA[
+M.util.js_pending("core/first");
+require(['core/first'], function() {
+require(['core/prefetch'])
+;
+require(["media_videojs/loader"], function(loader) {
+    loader.setUp('vi');
+});;
+M.util.js_pending('theme_academi/theme'); require(['theme_academi/theme'], function(amd) {M.util.js_complete('theme_academi/theme');});;
+
+require(['jquery', 'core/custom_interaction_events'], function($, CustomEvents) {
+    CustomEvents.define('#single_select677ca75b9d11e2', [CustomEvents.events.accessibleChange]);
+    $('#single_select677ca75b9d11e2').on(CustomEvents.events.accessibleChange, function() {
+        var ignore = $(this).find(':selected').attr('data-ignore');
+        if (typeof ignore === typeof undefined) {
+            $('#single_select_f677ca75b9d11e1').submit();
+        }
+    });
+});
+;
+
+require(['jquery', 'core_calendar/month_navigation_drag_drop'], function($, DragDrop) {
+    var root = $('#month-navigation-677ca75baa90b677ca75b9d11e4-1');
+    DragDrop.init(root);
+});
+;
+
+require([
+    'jquery',
+    'core_calendar/month_view_drag_drop'
+], function(
+    $,
+    DragDrop
+) {
+    var root = $('#month-detailed-677ca75baa90b677ca75b9d11e4-1');
+    DragDrop.init(root);
+});
+;
+
+require(['jquery', 'core_calendar/calendar', 'core_calendar/popover'], function($, Calendar, calendarPopover) {
+    Calendar.init($("#calendar-month-677ca75baa90b677ca75b9d11e4-1"));
+});
+;
+M.util.js_pending('core_calendar/popover'); require(['core_calendar/popover'], function(amd) {M.util.js_complete('core_calendar/popover');});;
+
+    require(['core/usermenu'], function(UserMenu) {
+        UserMenu.init();
+    });
+;
+
+require(['theme_boost/drawers']);
+;
+
+    require(['core/moremenu'], function(moremenu) {
+        moremenu(document.querySelector('#moremenu-677ca75bb50f0-navbar-nav'));
+    });
+;
+
+require(['theme_boost/drawers']);
+;
+
+M.util.js_pending('theme_boost/loader');
+require(['theme_boost/loader', 'theme_boost/drawer'], function(Loader, Drawer) {
+    Drawer.init();
+    M.util.js_complete('theme_boost/loader');
+});
+;
+
+require(['theme_boost/footer-popover'], function(FooterPopover) {
+    FooterPopover.init();
+});
+;
+
+    require(['jquery', 'mod_forum/discussion_list'], function($, View) {
+        var root = $('#discussion-list-677ca75bc9a37677ca75b9d11e6');
+        View.init(root);
+    });
+;
+M.util.js_pending('core/notification'); require(['core/notification'], function(amd) {amd.init(2, []); M.util.js_complete('core/notification');});;
+M.util.js_pending('core/log'); require(['core/log'], function(amd) {amd.setConfig({"level":"warn"}); M.util.js_complete('core/log');});;
+M.util.js_pending('core/page_global'); require(['core/page_global'], function(amd) {amd.init(); M.util.js_complete('core/page_global');});;
+M.util.js_pending('core/utility'); require(['core/utility'], function(amd) {M.util.js_complete('core/utility');});
+    M.util.js_complete("core/first");
+});
+//]]>
+</script>
+<script>
+//<![CDATA[
+M.str = {"moodle":{"lastmodified":"S\u1eeda l\u1ea7n cu\u1ed1i","name":"T\u00ean","error":"L\u1ed7i","info":"Th\u00f4ng tin","yes":"C\u00f3","no":"Kh\u00f4ng","cancel":"Hu\u1ef7 b\u1ecf","collapseall":"Thu g\u1ecdn to\u00e0n b\u1ed9","expandall":"M\u1edf r\u1ed9ng t\u1ea5t c\u1ea3","confirm":"X\u00e1c nh\u1eadn","areyousure":"B\u1ea1n c\u00f3 ch\u1eafc kh\u00f4ng?","closebuttontitle":"\u0110\u00f3ng","unknownerror":"L\u1ed7i kh\u00f4ng r\u00f5","file":"T\u1eadp tin","url":"URL"},"repository":{"type":"Lo\u1ea1i","size":"K\u00edch th\u01b0\u1edbc","invalidjson":"Chu\u1ed7i JSON kh\u00f4ng h\u1ee3p l\u1ec7","nofilesattached":"Kh\u00f4ng c\u00f3 t\u1ec7p \u0111\u00ednh k\u00e8m","filepicker":"B\u1ed9 ch\u1ecdn t\u1ec7p","logout":"Tho\u00e1t","nofilesavailable":"Kh\u00f4ng c\u00f3 t\u1ec7p","norepositoriesavailable":"Xin l\u1ed7i, kh\u00f4ng c\u00f3 kho n\u00e0o hi\u1ec7n t\u1ea1i c\u1ee7a b\u1ea1n c\u00f3 th\u1ec3 tr\u1ea3 v\u1ec1 c\u00e1c t\u1ec7p theo \u0111\u1ecbnh d\u1ea1ng y\u00eau c\u1ea7u.","fileexistsdialogheader":"T\u1ec7p t\u1ed3n t\u1ea1i","fileexistsdialog_editor":"M\u1ed9t t\u1ec7p c\u00f3 t\u00ean \u0111\u00f3 \u0111\u00e3 \u0111\u01b0\u1ee3c \u0111\u00ednh k\u00e8m trong v\u0103n b\u1ea3n b\u1ea1n \u0111ang s\u1eeda.","fileexistsdialog_filemanager":"M\u1ed9t t\u1ec7p c\u00f3 t\u00ean \u0111\u00e3 \u0111\u01b0\u1ee3c \u0111\u00ednh k\u00e8m","renameto":"\u0110\u1eb7t t\u00ean th\u00e0nh \"{$a}\"","referencesexist":"C\u00f3 {$a} \u0111\u01b0\u1eddng li\u00ean k\u1ebft d\u1eabn t\u1edbi file n\u00e0y","select":"Ch\u1ecdn"},"admin":{"confirmdeletecomments":"B\u1ea1n \u0111\u1ecbnh x\u00f3a c\u00e1c b\u00ecnh lu\u1eadn, b\u1ea1n c\u00f3 ch\u1eafc kh\u00f4ng?","confirmation":"X\u00e1c nh\u1eadn"},"debug":{"debuginfo":"Th\u00f4ng tin g\u1ee1 l\u1ed7i","line":"D\u00f2ng","stacktrace":"Stack trace"},"langconfig":{"labelsep":":"}};
+//]]>
+</script>
+<script>
+//<![CDATA[
+(function() {Y.use("moodle-filter_mathjaxloader-loader",function() {M.filter_mathjaxloader.configure({"mathjaxconfig":"MathJax.Hub.Config({\r\n    config: [\"Accessible.js\", \"Safe.js\"],\r\n    errorSettings: { message: [\"!\"] },\r\n    skipStartupTypeset: true,\r\n    messageStyle: \"none\"\r\n});\r\n","lang":"vi"});
+});
+M.util.help_popups.setup(Y);
+Y.use("moodle-course-categoryexpander",function() {Y.Moodle.course.categoryexpander.init();
+});
+ M.util.js_pending('random677ca75b9d11e7'); Y.on('domready', function() { M.util.js_complete("init");  M.util.js_complete('random677ca75b9d11e7'); });
+})();
+//]]>
+</script>
+
+                </div>
+                <div class="footer-section p-3">
+                    <div>Được cung cấp bởi <a href="https://moodle.com">Moodle</a></div>
+                </div>
+              </div>
+            </div>
+        
+        </footer>
+        <!--E.O.Footer-->
+        
+        
+        
+    </div>
+    
+</div>
+
+</body>
+</html>

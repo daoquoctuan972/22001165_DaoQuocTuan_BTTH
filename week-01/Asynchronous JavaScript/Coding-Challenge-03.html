@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loading Multiple Images Parallel</title>
+    <style>
+      img {
+        max-width: 500px;
+        margin: 20px;
+      }
+      .parallel {
+        border: 3px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="images"></div>
+    <!-- Container for images -->
+
+    <script>
+      // Helper function to simulate wait time
+      function wait(seconds) {
+        return new Promise((resolve) => setTimeout(resolve, seconds * 1000));
+      }
+
+      // Function to create and load an image
+      function createImage(imgPath) {
+        return new Promise((resolve, reject) => {
+          const img = document.createElement("img"); // Create an image element
+          img.src = imgPath; // Set the source of the image
+
+          // Listen for the 'load' event to resolve the promise
+          img.addEventListener("load", () => {
+            document.querySelector(".images").appendChild(img); // Append image to the DOM
+            resolve(img); // Resolve the promise with the image element
+          });
+
+          // Listen for the 'error' event to reject the promise in case of an error
+          img.addEventListener("error", () => {
+            reject(new Error("Image failed to load!"));
+          });
+        });
+      }
+
+      // Part 2 - Load multiple images
+      async function loadAll(imgArr) {
+        try {
+          const imgs = imgArr.map(async (imgPath) => {
+            const img = await createImage(imgPath);
+            img.classList.add("parallel"); // Add the 'parallel' class to the image
+            return img;
+          });
+
+          const loadedImages = await Promise.all(imgs); // Wait for all images to load in parallel
+          console.log(loadedImages); // Log the array of loaded images
+        } catch (err) {
+          console.error(err); // Log any errors
+        }
+      }
+
+      // Call the loadAll function with an array of image paths
+      loadAll([
+        "https://via.placeholder.com/500x300.png?text=Image+1",
+        "https://via.placeholder.com/500x300.png?text=Image+2",
+        "https://via.placeholder.com/500x300.png?text=Image+3",
+      ]);
+    </script>
+  </body>
+</html>
