@@ -1,0 +1,19 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+#line > input{
+  margin-left: 20px;
+  margin-bottom: 10px;
+  height: 25px;
+}
+#line > span{
+  font-size: 18px;
+  font-weight: 600;
+}
+th{
+  border: 2px 2px 2px 2px white;
+}
