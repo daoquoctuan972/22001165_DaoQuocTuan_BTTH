@@ -27,10 +27,6 @@ function Header(){
         <img src="../img/body.jpg" alt="User" className="user-avatar" />
         </div>
     </nav>
-    <div>
-        
-    </div>
-    <Footer></Footer>
   </>
     
     

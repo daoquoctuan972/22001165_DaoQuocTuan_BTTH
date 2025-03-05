@@ -5,19 +5,19 @@ import './App.css'
 import Header from './components/header'
 import Footer from './components/footer'
 function App() {
-  const [product, setProduct] = useState([]);
-  useEffect(() => {
-    axois.get('https://fakestoreapi.com/products')
-    .then((res) => {
-      setProduct(res.data);
-    }).catch((err) => {
-      console.log(err);
-    });
-  },[]);
+  // const [product, setProduct] = useState([]);
+  // useEffect(() => {
+  //   axois.get('https://fakestoreapi.com/products')
+  //   .then((res) => {
+  //     setProduct(res.data);
+  //   }).catch((err) => {
+  //     console.log(err);
+  //   });
+  // },[]);
   return (
     <>
       <Header></Header>
-      <main>
+      {/* <main>
         <h1>Products</h1>
         <div className="product-list">
           {product.map((item) => (
@@ -28,7 +28,8 @@ function App() {
             </div>
           ))}
         </div>
-        </main>
+      </main> */}
+      <Footer></Footer>
     </>
   )
 }
