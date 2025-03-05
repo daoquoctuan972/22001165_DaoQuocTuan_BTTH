@@ -1,6 +1,6 @@
 import { FaSearch } from "react-icons/fa";
 import "./header.css";
-import Footer from "./footer";
+import dataMenu from '../data/dataMenu.json';
 
 function Header(){
   return (
@@ -15,11 +15,11 @@ function Header(){
         </div>
 
         <ul className="navbar-menu">
-            <li>What to cook</li>
-            <li>Recipes</li>
-            <li>Ingredients</li>
-            <li>Occasions</li>
-            <li>About Us</li>
+          {Object.keys(dataMenu).map((key, index) => (
+            <a href={dataMenu[key]} className="nav-link" key={index}>
+              {key}
+            </a>
+          ))}
         </ul>
 
         <div className="navbar-right">
