@@ -1,0 +1,73 @@
+/* Navbar.css */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+  }
+  
+  .navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .logo {
+    color: #ec4899;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .search-bar {
+    position: relative;
+  }
+  
+  .search-input {
+    padding: 0.5rem 2.5rem 0.5rem 2rem;
+    border: 1px solid #ddd;
+    border-radius: 9999px;
+    outline: none;
+  }
+  
+  .search-icon {
+    position: absolute;
+    left: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+  }
+  
+  .navbar-menu {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    color: #666;
+  }
+  
+  .navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .recipe-box-btn {
+    padding: 0.5rem 1rem;
+    border: 1px solid #ec4899;
+    border-radius: 9999px;
+    color: #ec4899;
+    background: none;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .recipe-box-btn:hover {
+    background: #fde8f3;
+  }
+  
+  .user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
