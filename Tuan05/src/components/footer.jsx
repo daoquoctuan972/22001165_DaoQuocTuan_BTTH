@@ -1,7 +1,7 @@
 function Footer(){
     return(
     <>
-        <div className="flex bg-slate-900 w-full h-80 justify-self-center">
+        <div className="flex w-full h-80 justify-self-center bg-[rgb(29,34,40)]" >
             <div className="text-white w-200 ml-15 text-sm mt-8">
                 <p className="font-bold mt-1">About us</p>
                 <p className="pr-70 mt-5">Welcome to our website, a wonderful place to explore and learn how to cook like a pro</p>
