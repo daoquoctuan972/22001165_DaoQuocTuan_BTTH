@@ -8,7 +8,7 @@ function LayoutAdmin(){
                     <h2 className="text-[rgb(240,77,134)] font-bold text-2xl">Dashboard</h2>
                     <div className="w-full justify-items-end">
                         <div className="flex place-items-center">
-                            <input type="text" className="bg-[url('/img/Search.png')] bg-no-repeat pl-5 h-9 w-60 rounded-lg bg-gray-100" placeholder="Search..." im/>
+                            <input type="text" className="bg-[url('/img/Search.png')] bg-center bg-left bg-no-repeat pl-5 h-9 w-60 rounded-lg bg-gray-100" placeholder="Search..." im/>
                             <img src="/img/Bell 1.png" alt=""  className="ml-3"/>
                             <img src="/img/Question 1.png" alt=""  className="ml-3"/>
                             <img src="/img/Avatar 313.png" alt="" width={'45px'} height={'25px'} className="ml-3"/>
