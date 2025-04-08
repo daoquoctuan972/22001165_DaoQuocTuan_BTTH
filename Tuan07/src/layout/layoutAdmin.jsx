@@ -5,10 +5,10 @@ function LayoutAdmin(){
         <>
             <div className="container w-full">
                 <div className="header border-b border-gray-300 flex w-full">
-                    <h2 className="text-[rgb(240,77,134)] font-bold text-2xl">Dashboard</h2>
+                    <h2 className="text-[rgb(240,77,134)] font-bold text-2xl place-items-center">Dashboard</h2>
                     <div className="w-full justify-items-end">
                         <div className="flex place-items-center">
-                            <input type="text" className="bg-[url('/img/Search.png')] bg-center bg-left bg-no-repeat pl-5 h-9 w-60 rounded-lg bg-gray-100" placeholder="Search..." im/>
+                            <input type="text" className="bg-[url('/img/Search.png')] bg-center bg-left bg-no-repeat pl-5 h-10 w-80 rounded-lg bg-gray-100" placeholder="Search..." im/>
                             <img src="/img/Bell 1.png" alt=""  className="ml-3"/>
                             <img src="/img/Question 1.png" alt=""  className="ml-3"/>
                             <img src="/img/Avatar 313.png" alt="" width={'45px'} height={'25px'} className="ml-3"/>
@@ -43,8 +43,9 @@ function LayoutAdmin(){
                             Integrations
                         </li>
                     </ul>
-                    <div className="mt-5 place-items-center bg-[rgb(240,246,255)] rounded-lg p-6">
+                    <div className="mt-5 place-items-center bg-[rgb(240,246,255)] rounded-lg p-6 mt-20">
                         <img src="/img/Group.png" alt="" />
+                        <p className="text-center font-bold text-2xl mt-2">V2.0 is available</p>
                         <button className="rounded border-1 border-[rgb(110,142,184)] mt-5 text-[rgb(110,142,184)] rounded-lg h-9 w-70 bg-white" id="try">Try now</button>
                     </div>
                 </div>
@@ -59,7 +60,7 @@ function LayoutAdmin(){
                                 <div className="flex justify-between">
                                     <div>
                                         <h3 className="font-bold">Turnover</h3>
-                                        <h1 className="font-bold text-3xl mt-2">$92,405</h1>
+                                        <h1 className="font-bold text-2xl mt-2">$92,405</h1>
                                     </div>
                                     <img src="/img/Button 1509.png" alt="" className="w-10 h-10"/>
                                 </div>     
@@ -71,7 +72,7 @@ function LayoutAdmin(){
                             <div className="flex justify-between">
                                 <div>
                                     <h3 className="font-bold">Profit</h3>
-                                    <h1 className="font-bold text-3xl mt-1">$32,218</h1>
+                                    <h1 className="font-bold text-2xl mt-1">$32,218</h1>
                                 </div>
                                 <img src="/img/Button 1529.png" alt="" className="w-10 h-10"/>
                             </div>
@@ -83,7 +84,7 @@ function LayoutAdmin(){
                             <div className="flex justify-between">
                                 <div>
                                     <h3 className="font-bold">New customer</h3>
-                                    <h1 className="font-bold text-3xl mt-1">298</h1>
+                                    <h1 className="font-bold text-2xl mt-1">298</h1>
                                 </div>
                                 <img src="/img/Button 1530.png" alt="" className="w-10 h-10"/>
                             </div>                          
