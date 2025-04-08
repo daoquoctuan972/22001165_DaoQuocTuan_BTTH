@@ -1,9 +1,10 @@
 import "../layout/layout.css"
+import ListUsers from "../user/ListUsers"
 function LayoutAdmin(){
     return(
         <>
-            <div className="container">
-                <div className="header border-b border-gray-300 flex">
+            <div className="container w-full">
+                <div className="header border-b border-gray-300 flex w-full">
                     <h2 className="text-[rgb(240,77,134)] font-bold text-2xl">Dashboard</h2>
                     <div className="w-full justify-items-end">
                         <div className="flex place-items-center">
@@ -44,7 +45,7 @@ function LayoutAdmin(){
                     </ul>
                     <div className="mt-5 place-items-center bg-[rgb(240,246,255)] rounded-lg p-6">
                         <img src="/img/Group.png" alt="" />
-                        <button className="rounded border-1 border-[rgb(110,142,184)] mt-5 text-[rgb(110,142,184)] rounded-lg h-9 w-70">Try now</button>
+                        <button className="rounded border-1 border-[rgb(110,142,184)] mt-5 text-[rgb(110,142,184)] rounded-lg h-9 w-70 bg-white" id="try">Try now</button>
                     </div>
                 </div>
                 <div className="content">
@@ -54,27 +55,55 @@ function LayoutAdmin(){
                             <h2 className="font-bold text-xl">Overview</h2>
                         </div>
                         <div className="flex mt-3">
-                            <div className="w-1/3 rounded-xl h-40 bg-[rgb(255,240,245)] mr-5 p-5">      
-                                <h3 className="font-bold font-2xl">Turnover</h3>
-                                <h1>$92,405</h1>
-                                <p></p>
+                            <div className="w-1/3 rounded-xl h-40 bg-[rgb(255,240,245)] mr-5 p-5"> 
+                                <div className="flex justify-between">
+                                    <div>
+                                        <h3 className="font-bold">Turnover</h3>
+                                        <h1 className="font-bold text-3xl mt-2">$92,405</h1>
+                                    </div>
+                                    <img src="/img/Button 1509.png" alt="" className="w-10 h-10"/>
+                                </div>     
+                                <div className="flex mt-8">
+                                    <p className="text-green-600 mr-1 font-bold">^ 5.39% </p> <p>period of change</p>
+                                </div>
                             </div>
                             <div className="w-1/3 rounded-xl h-40 bg-[rgb(240,246,255)] mr-5 p-5">
-                                <h3 className="font-bold font-2xl">Profit</h3>
-                                <h1>$32,218</h1>
-                                <p></p>
+                            <div className="flex justify-between">
+                                <div>
+                                    <h3 className="font-bold">Profit</h3>
+                                    <h1 className="font-bold text-3xl mt-1">$32,218</h1>
+                                </div>
+                                <img src="/img/Button 1529.png" alt="" className="w-10 h-10"/>
+                            </div>
+                                <div className="flex mt-8">
+                                    <p className="text-green-600 mr-1 font-bold">^ 5.39% </p> <p>period of change</p>
+                                </div>
                             </div>
                             <div className="w-1/3 rounded-xl h-40 bg-[rgb(240,246,255)] mr-5 p-5">
-                                <h3 className="font-bold font-2xl">New customer</h3>
-                                <h1>298</h1>
-                                <p></p>
+                            <div className="flex justify-between">
+                                <div>
+                                    <h3 className="font-bold">New customer</h3>
+                                    <h1 className="font-bold text-3xl mt-1">298</h1>
+                                </div>
+                                <img src="/img/Button 1530.png" alt="" className="w-10 h-10"/>
+                            </div>                          
+                                <div className="flex mt-8">
+                                    <p className="text-green-600 mr-1 font-bold">^ 6.84% </p> <p>period of change</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div className="detail">
+                    <div className="detail mt-8 w-full">
                         <div className="flex">
-                            <img src="/img/File text 1.png" alt="" className="mr-2"/>
+                            <img src="/img/File text 1.png" alt="" className="mr-2 w-7 h-8"/>
                             <h2 className="font-bold text-xl">Detailed report</h2>
+                            <div className="flex justify-end w-5/6">
+                                <button className="border border-[rgb(245,76,135)] w-30 flex items-center text-[rgb(245,76,135)] justify-center rounded-lg h-10 place-items-center mr-3" id="down-up"><img src="/img/Download.png" alt="" className="h-5 w-5 mr-2" /> Import</button>
+                                <button className="border border-[rgb(245,76,135)] w-30 flex items-center text-[rgb(245,76,135)] justify-center rounded-lg h-10 place-items-center" id="down-up"><img src="/img/Move up.png" alt=""  className="h-5 w-5 mr-2"/> Export</button>
+                            </div>   
+                        </div>
+                        <div>
+                            <ListUsers></ListUsers>
                         </div>
                     </div>
                 </div>
