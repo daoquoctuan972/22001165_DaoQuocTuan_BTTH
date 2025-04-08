@@ -14,19 +14,28 @@ function ListUsers() {
         <div className="">
             <table>
                 <thead>
-                    <th><input type="checkbox" name="" id="" /></th>
-                    <th>CUSTOMER NAME</th>
-                    <th>COMPANY</th>
-                    <th>ORDER VALUE</th>
-                    <th>ORDERDATE</th>
-                    <th>STATUS</th>
+                    <tr>
+                        <th><input type="checkbox" name="" id="" /></th>
+                        <th>CUSTOMER NAME</th>
+                        <th>COMPANY</th>
+                        <th>ORDER VALUE</th>
+                        <th>ORDERDATE</th>
+                        <th>STATUS</th>
+                    </tr>  
                 </thead>
-                {users.map((user)=>{
-                        <div key={user.id} className="flex">
-                        </div>
-                    })}
+                <tbody>
+                    {users.map((user) => (
+                            <tr key={user.id}>
+                                <td><input type="checkbox" name="" id="" /></td>
+                                <td>{user.name}</td>
+                                <td>{user.company.name}</td>
+                                <td>{user.username}</td>
+                                <td>{user.phone}</td>
+                                <td>{user.email}</td>
+                            </tr>
+                        ))}
+                </tbody>    
             </table>
-                
         </div>
     </>
     

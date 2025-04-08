@@ -102,7 +102,7 @@ function LayoutAdmin(){
                                 <button className="border border-[rgb(245,76,135)] w-30 flex items-center text-[rgb(245,76,135)] justify-center rounded-lg h-10 place-items-center" id="down-up"><img src="/img/Move up.png" alt=""  className="h-5 w-5 mr-2"/> Export</button>
                             </div>   
                         </div>
-                        <div>
+                        <div className="mt-4">
                             <ListUsers></ListUsers>
                         </div>
                     </div>
