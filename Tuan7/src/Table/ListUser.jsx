@@ -18,8 +18,6 @@ function ListUser() {
             });
     }, []);
 
-    console.log({users})
-
     const [currentPage, setCurrentPage] = useState(1);
     const [isAllSelected, setIsAllSelected] = useState(false);
     const [selectedRows, setSelectedRows] = useState([]);
@@ -79,11 +77,10 @@ function ListUser() {
                     </tr>
                 </thead>
                 <tbody>
-                    {selectedUsers.map((user) => (
-                        
+                    {selectedUsers.map((user) => (        
                         <tr key={user.id} className="border border-gray-100 h-14 text-sm py-2" title="Watch profile">
                             <td className="px-6 py-2"><input type="checkbox" name="" id="" checked={selectedRows.includes(user.id)} onChange={() => handleSelectRow(user.id)} /></td>
-                            <NavLink to={"/user"}>
+                            <NavLink to={`/user/${user.id}`}>
                                 <td className="px-6 flex items-center gap-3 font-bold mt-3"><img src={user.avatar} alt="" className="h-8 w-8" />{user.name}</td>
                             </NavLink>
                             <td className="px-6">{user.company}</td>
