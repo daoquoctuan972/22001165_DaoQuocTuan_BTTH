@@ -1,8 +1,12 @@
 import { Dialog, Transition } from '@headlessui/react'
-import { Fragment, useState } from 'react'
+import { Fragment, useEffect, useState } from 'react'
 
-export default function EditUserModal({ isOpen, onClose, user, onSave }) {
+export default function EditUserModal({ isOpen, onClose, user, onUpdate }) {
     const [formData, setFormData] = useState(user);
+
+    useEffect(() => {
+        setFormData(user); 
+    }, [user]);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -11,8 +15,8 @@ export default function EditUserModal({ isOpen, onClose, user, onSave }) {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        onSave(formData);
-        onClose();
+        onUpdate(user.id, formData);
+        onClose(); 
     };
 
     return (
@@ -27,7 +31,7 @@ export default function EditUserModal({ isOpen, onClose, user, onSave }) {
                     leaveFrom="opacity-100"
                     leaveTo="opacity-0"
                 >
-                    <div className="fixed inset-0 bg-black/30 bg-opacity-25" />
+                    <div className="fixed inset-0 bg-black/30" />
                 </Transition.Child>
 
                 <div className="fixed inset-0 overflow-y-auto">
@@ -51,7 +55,7 @@ export default function EditUserModal({ isOpen, onClose, user, onSave }) {
                                         <label className="block mb-1 font-semibold">Customer Name</label>
                                         <input
                                             name="name"
-                                            value={formData.name}
+                                            value={formData.name || ''}
                                             onChange={handleChange}
                                             className="w-full border border-gray-300 rounded px-3 py-2"
                                             required
@@ -62,7 +66,7 @@ export default function EditUserModal({ isOpen, onClose, user, onSave }) {
                                         <label className="block mb-1 font-semibold">Company</label>
                                         <input
                                             name="company"
-                                            value={formData.company}
+                                            value={formData.company || ''}
                                             onChange={handleChange}
                                             className="w-full border border-gray-300 rounded px-3 py-2"
                                             required
@@ -72,10 +76,8 @@ export default function EditUserModal({ isOpen, onClose, user, onSave }) {
                                     <div>
                                         <label className="block mb-1 font-semibold">Order Value</label>
                                         <input
-                                            name="orderValue"
-                                            type="number"
-                                            step="0.01"
-                                            value={formData.orderValue}
+                                            name="ordervalue"
+                                            value={formData.ordervalue || ''}
                                             onChange={handleChange}
                                             className="w-full border border-gray-300 rounded px-3 py-2"
                                             required
@@ -85,9 +87,9 @@ export default function EditUserModal({ isOpen, onClose, user, onSave }) {
                                     <div>
                                         <label className="block mb-1 font-semibold">Order Date</label>
                                         <input
-                                            name="orderDate"
-                                            type="date"
-                                            value={formData.orderDate}
+                                            name="orderdate"
+                                            type="text"
+                                            value={formData.orderdate || ''}
                                             onChange={handleChange}
                                             className="w-full border border-gray-300 rounded px-3 py-2"
                                             required

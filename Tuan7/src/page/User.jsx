@@ -8,7 +8,7 @@ function UserDetail() {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    axios.get("https://mocki.io/v1/7fc0f947-fbef-4837-875e-205b5146668b")
+    axios.get("http://localhost:3001/users")
       .then((res) => {
         const foundUser = res.data.find((u) => String(u.id) === id);
         setUser(foundUser || {});

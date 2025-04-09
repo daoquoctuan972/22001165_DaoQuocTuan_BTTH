@@ -19,8 +19,17 @@ function ListUser() {
         setUsers(users.map(user => user.id === updatedUser.id ? updatedUser : user));
     };
 
+    const updateUser = async (id, updatedData) => {
+        try {
+            const response = await axios.put(`http://localhost:3001/users/${id}`, updatedData);
+            console.log("Cập nhật thành công:", response.data);
+        } catch (error) {
+            console.error("Lỗi cập nhật user:", error);
+        }
+    };
+
     useEffect(() => {
-        const url = 'https://mocki.io/v1/7fc0f947-fbef-4837-875e-205b5146668b';
+        const url = 'http://localhost:3001/users';
         axios.get(url)
             .then((response) => {
                 setUsers(response.data);
@@ -89,7 +98,7 @@ function ListUser() {
                     </tr>
                 </thead>
                 <tbody>
-                    {selectedUsers.map((user) => (        
+                    {selectedUsers.map((user) => (
                         <tr key={user.id} className="border border-gray-100 h-14 text-sm py-2" title="Watch profile">
                             <td className="px-6 py-2"><input type="checkbox" name="" id="" checked={selectedRows.includes(user.id)} onChange={() => handleSelectRow(user.id)} /></td>
                             <NavLink to={`/user/${user.id}`}>
@@ -109,7 +118,7 @@ function ListUser() {
                                     {user.status}
                                 </span>
                             </td>
-                            <td className="px-6"><img src="/img/create.png" alt="" title="Edit profile" onClick={(e) => {e.stopPropagation(); handleEdit(user);}}/></td>
+                            <td className="px-6"><img src="/img/create.png" alt="" title="Edit profile" onClick={(e) => { e.stopPropagation(); handleEdit(user); }} /></td>
                         </tr>
                     ))}
                 </tbody>
@@ -152,13 +161,16 @@ function ListUser() {
                     </button>
                 </div>
                 {isEditOpen && (
-                <EditUserModal
-                    isOpen={isEditOpen}
-                    onClose={() => setIsEditOpen(false)}
-                    user={selectedUser}
-                    onSave={handleSave}
-                />
-            )}
+                    <EditUserModal
+                        isOpen={isEditOpen}
+                        onClose={() => setIsEditOpen(false)}
+                        user={selectedUser}
+                        onUpdate={async (id, data) => {
+                            await updateUser(id, data);
+                            handleSave(data); // cập nhật vào state
+                        }}
+                    />
+                )}
             </div></>
     );
 }
