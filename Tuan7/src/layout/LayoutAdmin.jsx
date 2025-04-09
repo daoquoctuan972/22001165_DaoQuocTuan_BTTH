@@ -1,27 +1,39 @@
 import { useState, useEffect } from "react"
 import "../layout/LayoutAdmin.css"
+import axios from "axios";
+import dataTable from "../Table/ListUser";
 function LayoutAdmin() {
     const [overview, setOverview] = useState([]);
-    useEffect(() => {
-        const url = 'https://mocki.io/v1/cd979e95-56c1-4fae-add0-4c0302c17c35';
 
-        fetch(url)
+    useEffect(() => {
+        const url = 'https://mocki.io/v1/695da127-c17c-4fa5-abd0-0b9a2144217c';
+
+        axios.get(url)
             .then((response) => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                return response.json();
+                console.log("Dữ liệu từ API:", response.data);
+                setOverview(response.data);
             })
-            .then((data) => {
-                setOverview(data);
-                setLoading(false);
-            })
-            .catch(console.error);
+            .catch((error) => {
+                console.error("Lỗi khi fetch dữ liệu bằng axios:", error);
+            });
     }, []);
 
     const item1 = overview.find(item => item.id === 1);
     const item2 = overview.find(item => item.id === 2);
     const item3 = overview.find(item => item.id === 3);
+
+    useEffect(() => {
+        const url = 'https://mocki.io/v1/c7a166b3-4235-4594-bfe6-f507330b08eb';
+
+        axios.get(url)
+            .then((response) => {
+                console.log("Dữ liệu từ API:", response.data);
+                setUsers(response.data);
+            })
+            .catch((error) => {
+                console.error("Lỗi khi fetch dữ liệu bằng axios:", error);
+            });
+    }, []);
 
     return (
         <>
@@ -77,7 +89,7 @@ function LayoutAdmin() {
                             <h2 className="font-bold text-xl">Overview</h2>
                         </div>
                         <div className="flex mt-3">
-                            <div className="w-1/3 rounded-xl h-40 bg-[rgb(255,240,245)] mr-5 p-5"  key={item1.id}>
+                            <div className="w-1/3 rounded-xl h-40 bg-[rgb(255,240,245)] mr-5 p-5" key={item1.id}>
                                 <div className="flex justify-between">
                                     <div>
                                         <h3 className="font-bold">{item1.name}</h3>
@@ -115,10 +127,17 @@ function LayoutAdmin() {
                             </div>
                         </div>
                     </div>
-                    <div className="detail">
+                    <div className="detail mt-5">
                         <div className="flex">
-                            <img src="/img/File text 1.png" alt="" className="mr-2" />
+                            <img src="/img/File text 1.png" alt="" className="mr-2 h-8 w-7" />
                             <h2 className="font-bold text-xl">Detailed report</h2>
+                            <div className="flex justify-end w-5/6">
+                                <button className="border border-[rgb(245,76,135)] w-30 flex items-center text-[rgb(245,76,135)] justify-center rounded-lg h-10 place-items-center mr-3" id="down-up"><img src="/img/Download.png" alt="" className="h-5 w-5 mr-2" /> Import</button>
+                                <button className="border border-[rgb(245,76,135)] w-30 flex items-center text-[rgb(245,76,135)] justify-center rounded-lg h-10 place-items-center" id="down-up"><img src="/img/Move up.png" alt="" className="h-5 w-5 mr-2" /> Export</button>
+                            </div>
+                        </div>
+                        <div>
+                            <dataTable></dataTable>
                         </div>
                     </div>
                 </div>
