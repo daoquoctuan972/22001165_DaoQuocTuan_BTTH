@@ -2,6 +2,7 @@ import { useState, useEffect } from "react"
 import "../layout/LayoutAdmin.css"
 import axios from "axios";
 import ListUser from "../components/ListUser"
+import AddUserModal from "../components/AddUserModal"
 
 function LayoutAdmin() {
     const [overview, setOverview] = useState([]);
@@ -17,6 +18,13 @@ function LayoutAdmin() {
                 console.error("Lỗi khi fetch dữ liệu bằng axios:", error);
             });
     }, []);
+
+    const [isAddOpen, setIsAddOpen] = useState(false);
+    const [users, setUsers] = useState([]);
+
+    const handleAddUser = (newUser) => {
+        setUsers([...users, newUser]);
+    };
 
     const item1 = overview.find(item => item.id === 1) || {};
     const item2 = overview.find(item => item.id === 2) || {};
@@ -119,7 +127,8 @@ function LayoutAdmin() {
                             <img src="/img/File text 1.png" alt="" className="mr-2 h-8 w-7" />
                             <h2 className="font-bold text-xl">Detailed report</h2>
                             <div className="flex justify-end w-5/6">
-                                <button className="border border-[rgb(245,76,135)] w-30 flex items-center text-[rgb(245,76,135)] justify-center rounded-lg h-10 place-items-center mr-3" id="down-up"><img src="/img/Download.png" alt="" className="h-5 w-5 mr-2" /> Import</button>
+                                <button className="border border-[rgb(245,76,135)] w-30 flex items-center text-[rgb(245,76,135)] justify-center rounded-lg h-10 place-items-center mr-3" id="down-up" onClick={() => setIsAddOpen(true)} ><img src="/img/Download.png" alt="" className="h-5 w-5 mr-2" /> Import</button>
+                                
                                 <button className="border border-[rgb(245,76,135)] w-30 flex items-center text-[rgb(245,76,135)] justify-center rounded-lg h-10 place-items-center" id="down-up"><img src="/img/Move up.png" alt="" className="h-5 w-5 mr-2" /> Export</button>
                             </div>
                         </div>
@@ -128,6 +137,11 @@ function LayoutAdmin() {
                         </div>
                     </div>
                 </div>
+                <AddUserModal
+                                    isOpen={isAddOpen}
+                                    onClose={() => setIsAddOpen(false)}
+                                    onAdd={handleAddUser}
+                                />
             </div>
         </>
     )
