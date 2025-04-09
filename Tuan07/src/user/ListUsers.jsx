@@ -16,7 +16,7 @@ function ListUsers() {
     const [selectedRows, setSelectedRows] = useState([]);
     const [editingUser, setEditingUser] = useState(null);
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const navigate = useNavigate(); 
+    const navigate = useNavigate();
 
     const handleEditClick = (user) => {
         setEditingUser(user);
@@ -88,7 +88,7 @@ function ListUsers() {
                     </thead>
                     <tbody>
                         {selectedUsers.map((user) => (
-                            <tr key={user.id} className="border border-gray-100 h-14 text-sm py-2" onClick={() => navigate(`/user/${user.id}`)}> 
+                            <tr key={user.id} className="border border-gray-100 h-14 text-sm py-2" title="Watch profile" onClick={() => navigate(`/user/${user.id}`)}>
                                 <td className="px-6 py-2"><input type="checkbox" name="" id="" checked={selectedRows.includes(user.id)} onChange={() => handleSelectRow(user.id)} /></td>
                                 <td className="px-6 flex items-center gap-3 font-bold mt-3"><img src={user.avatar} alt="" className="h-8 w-8" />{user.name}</td>
                                 <td className="px-6">{user.company}</td>
@@ -105,7 +105,7 @@ function ListUsers() {
                                         {user.status}
                                     </span>
                                 </td>
-                                <td className="px-6"><img src="/img/create.png" alt="" onClick={(e) => {e.stopPropagation(); handleEditClick(user)}} /></td>
+                                <td className="px-6"><img src="/img/create.png" alt="" title="Edit profile" onClick={(e) => { e.stopPropagation(); handleEditClick(user) }} /></td>
                             </tr>
                         ))}
                     </tbody>
@@ -177,6 +177,19 @@ function ListUsers() {
                                     }
                                     placeholder="Order Value..."
                                 />
+
+                                {/* ✅ Select status */}
+                                <select
+                                    className="border rounded p-2"
+                                    value={editingUser.status}
+                                    onChange={(e) =>
+                                        setEditingUser({ ...editingUser, status: e.target.value })
+                                    }
+                                >
+                                    <option value="New">New</option>
+                                    <option value="In-progress">In-progress</option>
+                                    <option value="Completed">Completed</option>
+                                </select>
 
                                 <div className="flex justify-end gap-2 mt-4">
                                     <button
