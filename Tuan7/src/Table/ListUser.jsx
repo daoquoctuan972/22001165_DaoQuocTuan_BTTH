@@ -1,6 +1,9 @@
 import { useState, useEffect, useMemo } from "react";
 import axios from "axios";
+import { NavLink } from "react-router-dom";
+
 const USERS_PER_PAGE = 6;
+
 function ListUser() {
     const [users, setUsers] = useState([]);
 
@@ -77,9 +80,12 @@ function ListUser() {
                 </thead>
                 <tbody>
                     {selectedUsers.map((user) => (
+                        
                         <tr key={user.id} className="border border-gray-100 h-14 text-sm py-2" title="Watch profile">
                             <td className="px-6 py-2"><input type="checkbox" name="" id="" checked={selectedRows.includes(user.id)} onChange={() => handleSelectRow(user.id)} /></td>
-                            <td className="px-6 flex items-center gap-3 font-bold mt-3"><img src={user.avatar} alt="" className="h-8 w-8" />{user.name}</td>
+                            <NavLink to={"/user"}>
+                                <td className="px-6 flex items-center gap-3 font-bold mt-3"><img src={user.avatar} alt="" className="h-8 w-8" />{user.name}</td>
+                            </NavLink>
                             <td className="px-6">{user.company}</td>
                             <td className="px-6">{user.ordervalue}</td>
                             <td className="px-6">{user.orderdate}</td>
@@ -94,7 +100,7 @@ function ListUser() {
                                     {user.status}
                                 </span>
                             </td>
-                            <td className="px-6"><img src="/img/create.png" alt="" title="Edit profile"/></td>
+                            <td className="px-6"><img src="/img/create.png" alt="" title="Edit profile" onClick={(e) => { e.stopPropagation(); handleEditClick(user) }}/></td>
                         </tr>
                     ))}
                 </tbody>
