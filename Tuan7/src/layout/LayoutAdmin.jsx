@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react"
 import "../layout/LayoutAdmin.css"
 import axios from "axios";
-import dataTable from "../Table/ListUser";
+import ListUser from "../table/ListUser"
 function LayoutAdmin() {
     const [overview, setOverview] = useState([]);
 
     useEffect(() => {
-        const url = 'https://mocki.io/v1/695da127-c17c-4fa5-abd0-0b9a2144217c';
+        const url = 'https://mocki.io/v1/fe1e55c6-0049-4e3d-8e7d-a1aa3dbb4d7f';
 
         axios.get(url)
             .then((response) => {
@@ -18,22 +18,9 @@ function LayoutAdmin() {
             });
     }, []);
 
-    const item1 = overview.find(item => item.id === 1);
-    const item2 = overview.find(item => item.id === 2);
-    const item3 = overview.find(item => item.id === 3);
-
-    useEffect(() => {
-        const url = 'https://mocki.io/v1/c7a166b3-4235-4594-bfe6-f507330b08eb';
-
-        axios.get(url)
-            .then((response) => {
-                console.log("Dữ liệu từ API:", response.data);
-                setUsers(response.data);
-            })
-            .catch((error) => {
-                console.error("Lỗi khi fetch dữ liệu bằng axios:", error);
-            });
-    }, []);
+    const item1 = overview.find(item => item.id === 1) || {};
+    const item2 = overview.find(item => item.id === 2) || {};
+    const item3 = overview.find(item => item.id === 3) || {};
 
     return (
         <>
@@ -136,8 +123,8 @@ function LayoutAdmin() {
                                 <button className="border border-[rgb(245,76,135)] w-30 flex items-center text-[rgb(245,76,135)] justify-center rounded-lg h-10 place-items-center" id="down-up"><img src="/img/Move up.png" alt="" className="h-5 w-5 mr-2" /> Export</button>
                             </div>
                         </div>
-                        <div>
-                            <dataTable></dataTable>
+                        <div className="mt-4">
+                            <ListUser></ListUser>
                         </div>
                     </div>
                 </div>
