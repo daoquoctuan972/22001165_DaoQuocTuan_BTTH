@@ -1,0 +1,27 @@
+.container {
+    display: grid;
+    grid-template-areas:
+      "menu header"
+      "menu content";
+    grid-template-columns: 1fr 3fr;
+    padding: 5px;
+  }
+  .container > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+  }
+  .container > div.header {
+    grid-area: header;
+    height: 70px;
+  }
+  .container > div.menu {
+    grid-area: menu;
+    width: 350px;
+  }
+  .container > div.content {
+    grid-area: content;
+    width: auto;
+  }
+  .content{
+    margin-top: -320px;
+  }
