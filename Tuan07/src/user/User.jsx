@@ -8,7 +8,6 @@ function UserProfile() {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    // Tìm user theo id
     const foundUser = usersData.find((u) => String(u.id) === id);
     setUser(foundUser);
   }, [id]);

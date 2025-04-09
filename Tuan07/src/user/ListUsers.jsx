@@ -1,6 +1,8 @@
 import { useEffect, useMemo, useState } from "react";
 import usersData from "../data/data.json"
 import { useNavigate } from "react-router-dom";
+import AddUser from "./AddUser";
+import EditUserModal from "./EditUser";
 
 const USERS_PER_PAGE = 6;
 
@@ -149,65 +151,15 @@ function ListUsers() {
                     </div>
                 </div>
                 {isModalOpen && editingUser && (
-                    <div className="fixed inset-0 bg-black/20 bg-opacity-30 backdrop-blur-sm flex items-center justify-center z-50">
-                        <div className="bg-white p-6 rounded-xl shadow-xl w-[400px]">
-                            <h2 className="text-xl font-bold mb-4">Edit User</h2>
-                            <div className="flex flex-col gap-3">
-                                <input
-                                    className="border rounded p-2"
-                                    value={editingUser.name}
-                                    onChange={(e) =>
-                                        setEditingUser({ ...editingUser, name: e.target.value })
-                                    }
-                                    placeholder="Name..."
-                                />
-                                <input
-                                    className="border rounded p-2"
-                                    value={editingUser.company}
-                                    onChange={(e) =>
-                                        setEditingUser({ ...editingUser, company: e.target.value })
-                                    }
-                                    placeholder="Company..."
-                                />
-                                <input
-                                    className="border rounded p-2"
-                                    value={editingUser.ordervalue}
-                                    onChange={(e) =>
-                                        setEditingUser({ ...editingUser, ordervalue: e.target.value })
-                                    }
-                                    placeholder="Order Value..."
-                                />
-
-                                {/* ✅ Select status */}
-                                <select
-                                    className="border rounded p-2"
-                                    value={editingUser.status}
-                                    onChange={(e) =>
-                                        setEditingUser({ ...editingUser, status: e.target.value })
-                                    }
-                                >
-                                    <option value="New">New</option>
-                                    <option value="In-progress">In-progress</option>
-                                    <option value="Completed">Completed</option>
-                                </select>
-
-                                <div className="flex justify-end gap-2 mt-4">
-                                    <button
-                                        className="px-4 py-2 bg-gray-300 rounded"
-                                        onClick={() => setIsModalOpen(false)}
-                                    >
-                                        Cancel
-                                    </button>
-                                    <button
-                                        className="px-4 py-2 bg-blue-500 text-white rounded"
-                                        onClick={() => handleSaveEdit()}
-                                    >
-                                        Save
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <EditUserModal
+                    user={editingUser}
+                    onClose={() => setIsModalOpen(false)}
+                    onSave={(updatedUser) => {
+                        const updated = users.map(u => u.id === updatedUser.id ? updatedUser : u);
+                        setUsers(updated);
+                        setIsModalOpen(false);
+                    }}
+                />
                 )}
             </div>
         </>

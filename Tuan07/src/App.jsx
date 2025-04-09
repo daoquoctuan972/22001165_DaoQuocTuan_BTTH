@@ -8,7 +8,7 @@ function App() {
     <>
       <Routes>
         <Route path='/' element={<LayoutAdmin />} />
-        <Route path='/home' element={<LayoutAdmin />} />
+        <Route path='/home' element={<LayoutAdmin onSave={(data) => console.log("saved", data)} />} />
         <Route path='/user/:id' element={<UserProfile/>} />
       </Routes>
     </>
