@@ -105,7 +105,7 @@ function ListUsers() {
                                         {user.status}
                                     </span>
                                 </td>
-                                <td className="px-6"><img src="/img/create.png" alt="" onClick={() => handleEditClick(user)} /></td>
+                                <td className="px-6"><img src="/img/create.png" alt="" onClick={(e) => {e.stopPropagation(); handleEditClick(user)}} /></td>
                             </tr>
                         ))}
                     </tbody>
