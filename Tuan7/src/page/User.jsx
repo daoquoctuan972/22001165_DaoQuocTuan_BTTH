@@ -8,7 +8,7 @@ function UserDetail() {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    axios.get("https://mocki.io/v1/c7a166b3-4235-4594-bfe6-f507330b08eb")
+    axios.get("https://mocki.io/v1/7fc0f947-fbef-4837-875e-205b5146668b")
       .then((res) => {
         const foundUser = res.data.find((u) => String(u.id) === id);
         setUser(foundUser || {});
@@ -33,7 +33,7 @@ function UserDetail() {
         <h2 className="text-xl font-semibold">Contact</h2>
         <p className="mt-1 mb-1">Company: <b>{user.company}</b></p>
         <h2 className="text-xl font-semibold">Order history</h2>
-        <p className="mt-1 mb-1">Order Value: <b>{user.ordervalue}</b></p>
+        <p className="mt-1 mb-1">Order Value: <b>${user.ordervalue}</b></p>
         <p className="mt-1 mb-2">Order Date: <b>{user.orderdate}</b></p>
         <div className="flex w-full justify-between">
           <span

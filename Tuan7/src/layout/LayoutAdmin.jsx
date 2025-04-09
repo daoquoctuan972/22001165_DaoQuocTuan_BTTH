@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import "../layout/LayoutAdmin.css"
 import axios from "axios";
-import ListUser from "../table/ListUser"
+import ListUser from "../components/ListUser"
 
 function LayoutAdmin() {
     const [overview, setOverview] = useState([]);
@@ -11,7 +11,6 @@ function LayoutAdmin() {
 
         axios.get(url)
             .then((response) => {
-                console.log("Dữ liệu từ API:", response.data);
                 setOverview(response.data);
             })
             .catch((error) => {

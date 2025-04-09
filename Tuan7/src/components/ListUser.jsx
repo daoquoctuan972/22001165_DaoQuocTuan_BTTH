@@ -1,14 +1,26 @@
 import { useState, useEffect, useMemo } from "react";
 import axios from "axios";
 import { NavLink } from "react-router-dom";
+import EditUserModal from "./EditUserModal";
 
 const USERS_PER_PAGE = 6;
 
 function ListUser() {
     const [users, setUsers] = useState([]);
+    const [isEditOpen, setIsEditOpen] = useState(false);
+    const [selectedUser, setSelectedUser] = useState(null);
+
+    const handleEdit = (user) => {
+        setSelectedUser(user);
+        setIsEditOpen(true);
+    };
+
+    const handleSave = (updatedUser) => {
+        setUsers(users.map(user => user.id === updatedUser.id ? updatedUser : user));
+    };
 
     useEffect(() => {
-        const url = 'https://mocki.io/v1/c7a166b3-4235-4594-bfe6-f507330b08eb';
+        const url = 'https://mocki.io/v1/7fc0f947-fbef-4837-875e-205b5146668b';
         axios.get(url)
             .then((response) => {
                 setUsers(response.data);
@@ -84,7 +96,7 @@ function ListUser() {
                                 <td className="px-6 flex items-center gap-3 font-bold mt-3"><img src={user.avatar} alt="" className="h-8 w-8" />{user.name}</td>
                             </NavLink>
                             <td className="px-6">{user.company}</td>
-                            <td className="px-6">{user.ordervalue}</td>
+                            <td className="px-6">${user.ordervalue}</td>
                             <td className="px-6">{user.orderdate}</td>
                             <td className="text-center">
                                 <span
@@ -97,7 +109,7 @@ function ListUser() {
                                     {user.status}
                                 </span>
                             </td>
-                            <td className="px-6"><img src="/img/create.png" alt="" title="Edit profile" onClick={(e) => { e.stopPropagation(); handleEditClick(user) }}/></td>
+                            <td className="px-6"><img src="/img/create.png" alt="" title="Edit profile" onClick={(e) => {e.stopPropagation(); handleEdit(user);}}/></td>
                         </tr>
                     ))}
                 </tbody>
@@ -139,6 +151,14 @@ function ListUser() {
                         {">"}
                     </button>
                 </div>
+                {isEditOpen && (
+                <EditUserModal
+                    isOpen={isEditOpen}
+                    onClose={() => setIsEditOpen(false)}
+                    user={selectedUser}
+                    onSave={handleSave}
+                />
+            )}
             </div></>
     );
 }
