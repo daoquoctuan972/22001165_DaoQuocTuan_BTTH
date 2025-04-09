@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import usersData from "../data/data.json"
+import { useNavigate } from "react-router-dom";
 
 const USERS_PER_PAGE = 6;
 
@@ -15,6 +16,7 @@ function ListUsers() {
     const [selectedRows, setSelectedRows] = useState([]);
     const [editingUser, setEditingUser] = useState(null);
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const navigate = useNavigate(); 
 
     const handleEditClick = (user) => {
         setEditingUser(user);
@@ -86,7 +88,7 @@ function ListUsers() {
                     </thead>
                     <tbody>
                         {selectedUsers.map((user) => (
-                            <tr key={user.id} className="border border-gray-100 h-14 text-sm py-2">
+                            <tr key={user.id} className="border border-gray-100 h-14 text-sm py-2" onClick={() => navigate(`/user/${user.id}`)}> 
                                 <td className="px-6 py-2"><input type="checkbox" name="" id="" checked={selectedRows.includes(user.id)} onChange={() => handleSelectRow(user.id)} /></td>
                                 <td className="px-6 flex items-center gap-3 font-bold mt-3"><img src={user.avatar} alt="" className="h-8 w-8" />{user.name}</td>
                                 <td className="px-6">{user.company}</td>
@@ -103,12 +105,12 @@ function ListUsers() {
                                         {user.status}
                                     </span>
                                 </td>
-                                <td className="px-6"><img src="/img/create.png" alt="" onClick={handleEditClick} /></td>
+                                <td className="px-6"><img src="/img/create.png" alt="" onClick={() => handleEditClick(user)} /></td>
                             </tr>
                         ))}
                     </tbody>
                 </table>
-                <div className="flex mt-4 gap-4 w-full place-items-center  justify-between">
+                <div className="flex mt-4 gap-4 w-full place-items-center justify-between">
                     <div>
                         <p>{users.length} results</p>
                     </div>
@@ -147,7 +149,7 @@ function ListUsers() {
                     </div>
                 </div>
                 {isModalOpen && editingUser && (
-                    <div className="fixed inset-0 bg-black bg-opacity-30 flex items-center justify-center z-50">
+                    <div className="fixed inset-0 bg-black/20 bg-opacity-30 backdrop-blur-sm flex items-center justify-center z-50">
                         <div className="bg-white p-6 rounded-xl shadow-xl w-[400px]">
                             <h2 className="text-xl font-bold mb-4">Edit User</h2>
                             <div className="flex flex-col gap-3">
@@ -157,6 +159,7 @@ function ListUsers() {
                                     onChange={(e) =>
                                         setEditingUser({ ...editingUser, name: e.target.value })
                                     }
+                                    placeholder="Name..."
                                 />
                                 <input
                                     className="border rounded p-2"
@@ -164,6 +167,7 @@ function ListUsers() {
                                     onChange={(e) =>
                                         setEditingUser({ ...editingUser, company: e.target.value })
                                     }
+                                    placeholder="Company..."
                                 />
                                 <input
                                     className="border rounded p-2"
@@ -171,6 +175,7 @@ function ListUsers() {
                                     onChange={(e) =>
                                         setEditingUser({ ...editingUser, ordervalue: e.target.value })
                                     }
+                                    placeholder="Order Value..."
                                 />
 
                                 <div className="flex justify-end gap-2 mt-4">
